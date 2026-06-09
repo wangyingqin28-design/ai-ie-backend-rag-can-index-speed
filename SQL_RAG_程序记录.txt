@@ -1,0 +1,249 @@
+https://plus.keria.cc.cd/
+tensors.balding-01+zfn@icloud.com                                                                                                  
+D49E9BDC1571C1BC
+
+3YL6-58ZN-VWRG
+
+
+cd "D:\wkt\ai-ie-backend-feature-rag-new (1)\ai-ie-backend"
+
+git init
+git remote remove origin 2>$null
+git remote add origin "http://win2025-server:3000/ZZH/getsoft---ai-erp-backend.git"
+
+git checkout -b feature/rag-new-wkt
+git add .
+git commit -m "提交我的RAG代码"
+
+git push -u origin feature/rag-new-wkt
+
+
+
+
+
+
+第一次创git
+cd "D:\wkt\ai-ie-backend-feature-rag-new (1)"
+git config --global user.name "wangyingqin28-design"
+git config --global user.email "wangyingqin28@gmail.com"
+cd "D:\wkt\ai-ie-backend-feature-rag-new (1)"
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/wangyingqin28-design/ai-ie-backend-rag-can-index-speed.git
+git push -u origin main
+
+
+以后每次更新
+cd "D:\wkt\ai-ie-backend-feature-rag-new (1)"
+git add .
+git commit -m "更新说明"
+git push
+
+
+
+查到了。你截图里这个 127.0.0.1:7474/browser/ 对应的是 app/SQL_RAG 这套 Neo4j 配置：
+
+用户名：neo4j
+密码：SqlRagNeo4j@2026
+连接地址：bolt://127.0.0.1:7687
+数据库：neo4j
+
+
+以后开分支
+以后你要基于这个仓库开新功能分支：
+
+git switch main
+解释：切回主分支。
+
+git pull --ff-only origin main
+解释：从 GitHub 拉最新 main，只允许快进合并，避免乱合并。
+
+git switch -c feature/你的功能名
+例子：
+
+git switch -c feature/sql-rag-qdrant-sync
+解释：从当前 main 新建一个功能分支。
+
+git push -u origin feature/sql-rag-qdrant-sync
+
+
+
+
+
+
+
+
+
+
+可以。你可以用同一个 thread 连续问下面 10 句，专门压测：数据库召回、RAG Prompt Builder、Neo4j 多跳图谱、模型自主规划、MCP/function calling 工具调用、记忆和纠错回流。
+
+入账单如果已经入仓了，但是预付款状态又对不上，我是不是要先让财务反审入账单，再把付款状态退回来？这一步和后面重新冲账、继续付款之间到底是什么关系？
+
+如果我现在看到某张入账单可以反审，但是业务那边说不能直接动，因为会影响前面预付款和后面付款单，那你帮我判断应该先查哪些证据、哪些关联单据、哪些业务节点？
+
+你结合知识库和图谱关系帮我分析一下：入仓单、入账单、预付款、付款状态、财务反审这几个东西是不是一条链？如果其中一个状态没退回来，后面会卡在哪里？
+
+假设客户问“这张入账单我能不能反审”，但他说得很含糊，只提到“前面充不到、后面付不了”，你应该先自己判断意图，再查 RAG、图谱、多跳关系和业务工具，最后告诉我是不是需要财务先处理。
+
+如果一张补料单已经结单，但是发现没审核，系统又提示当前人员没权限，这种情况你不要直接给结论，先帮我查知识库、图谱里“结单、补料单、审核、权限、离职人员”之间有没有关系，再判断该找谁处理。
+
+客户说工序表已经完成了，但又问“这个审核是谁审核，是不是组长审核每一个工序”，你帮我按 Agent 链路查一下：工序表、工序、完成、审核、组长这些实体在知识图谱里怎么连，最后组织成业务解释。
+
+如果某个订单已经接单、部分工序完成，但是现在要新增或修改工序，系统提示不能改，你帮我判断这是业务规则限制、权限问题，还是需要先反审/撤销某个节点？请用 RAG 和图谱证据一起回答。
+
+客户说“这单已经付款前改过价，现在预付款充不到前面账上”，你帮我追问并分析：改价、付款、预付款、入账单、反审之间是否存在多跳关系，应该先查哪个工具，最后应该答复财务怎么处理？
+
+如果客户问“为什么这张单不是业务可以审，而是要财务反审”，你不要只返回知识库 top1 答案，要结合图谱里的相关实体和边，把业务原因、风险点、下一步动作说清楚。
+
+连续上下文测试：刚才说的入账单反审问题，如果我接着问“那这一步不做，后面继续付款会有什么后果”，你要记住前文业务场景，同时重新查 RAG、Neo4j 图谱和业务工具，判断是不是会导致预付款状态无法回退或冲账失败。
+
+建议你先测第 1 句和第 10 句。第 1 句看完整必经链路，第 10 句看三层记忆和上下文续问有没有参与。
+
+
+
+
+
+
+
+
+
+
+
+前端：http://127.0.0.1:18181
+业务脑健康：http://127.0.0.1:18180/agent/business-brain/health
+开放 API 文档：http://127.0.0.1:18080/docs
+Qdrant Dashboard：http://127.0.0.1:6333/dashboard                                                                                          重启整个服务
+
+                                                                                                                                                                                         $ports = 18080,18180,18181
+                                                                                                                                                                                         Get-NetTCPConnection -LocalPort $ports -ErrorAction SilentlyContinue |
+                                                                                                                                                                                        Where-Object { $_.State -eq "Listen" } |
+                                                                                                                                                                                         Select-Object -ExpandProperty OwningProcess -Unique |
+                                                                                                                                                                                         ForEach-Object { Stop-Process -Id $_ -Force }                                                                                                                                                                                                                                    	                                                                                                                                                                                    
+                                                                                                                                                                                         Get-NetTCPConnection -LocalPort 18000 -ErrorAction SilentlyContinue |
+                                                                                                                                                                                         Where-Object { $_.State -eq "Listen" } |
+                                                                                                                                                                                         Select-Object -ExpandProperty OwningProcess -Unique |
+                                                                                                                                                                                         ForEach-Object { Stop-Process -Id $_ -Force }
+
+
+
+# 1. Docker Desktop
+Start-Process -FilePath "C:\Program Files\Docker\Docker\Docker Desktop.exe" -WindowStyle Hidden
+
+# 2. SQL Server + Qdrant + Neo4j
+cd "D:\wkt\ai-ie-backend-feature-rag-new (1)\ai-ie-backend\app\SQL_RAG"
+docker compose --env-file .\.env -f .\docker-compose.yml up -d
+
+# 3. Qwen 本地模型，端口 18000
+cd "D:\wkt\ai-ie-backend-feature-rag-new (1)\ai-ie-backend"
+.\.venv\Scripts\python.exe app\SQL_RAG\main.py qwen35-2b start
+
+# 4. 开放数据库 API，端口 18080
+cd "D:\wkt\ai-ie-backend-feature-rag-new (1)\ai-ie-backend\app\SQL_RAG"
+..\..\.venv\Scripts\python.exe -m uvicorn data_cleaning.integration.open_database_api:app --host 0.0.0.0 --port 18080
+
+# 5. 业务脑后端，端口 18180
+cd "D:\wkt\ai-ie-backend-feature-rag-new (1)\ai-ie-backend"
+.\.venv\Scripts\python.exe app\SQL_RAG\main.py business-brain-service --host 127.0.0.1 --port 18180
+
+# 6. 前端 WebUI，端口 18181
+cd "D:\wkt\ai-ie-backend-feature-rag-new (1)\ai-ie-backend"
+.\.venv\Scripts\python.exe app\SQL_RAG\agent_webUI\webui_server.py --host 127.0.0.1 --port 18181 --backend-url http://127.0.0.1:18180
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 1. 启动 Docker Desktop
+Start-Process -FilePath "C:\Program Files\Docker\Docker\Docker Desktop.exe" -WindowStyle Hidden
+
+# 2. 启动 SQL Server + Qdrant
+cd "D:\wkt\ai-ie-backend-feature-rag-new (1)\ai-ie-backend\app\SQL_RAG"
+docker compose --env-file .\.env -f .\docker-compose.yml up -d
+
+# 3. 启动 Qwen 本机模型服务，端口 18000
+cd "D:\wkt\ai-ie-backend-feature-rag-new (1)\ai-ie-backend"
+.\.venv\Scripts\python.exe app\SQL_RAG\main.py qwen35-2b start
+
+# 4. 启动开放数据库 API，端口 18080
+cd "D:\wkt\ai-ie-backend-feature-rag-new (1)\ai-ie-backend\app\SQL_RAG"
+..\..\.venv\Scripts\python.exe -m uvicorn data_cleaning.integration.open_database_api:app --host 0.0.0.0 --port 18080
+
+# 5. 启动业务脑后端，端口 18180
+cd "D:\wkt\ai-ie-backend-feature-rag-new (1)\ai-ie-backend"
+.\.venv\Scripts\python.exe app\SQL_RAG\main.py business-brain-service --host 127.0.0.1 --port 18180
+
+# 6. 启动前端 WebUI，端口 18181
+cd "D:\wkt\ai-ie-backend-feature-rag-new (1)\ai-ie-backend"
+.\.venv\Scripts\python.exe app\SQL_RAG\agent_webUI\webui_server.py --host 127.0.0.1 --port 18181 --backend-url http://127.0.0.1:18180
+
+
+
+
+
+
+
+Start-Process "C:\Program Files\Docker\Docker\Docker Desktop.exe"
+
+cd "D:\wkt\ai-ie-backend-feature-rag-new (1)\ai-ie-backend\app\SQL_RAG"
+
+docker compose --env-file .\.env -f .\docker-compose.yml up -d
+
+..\..\.venv\Scripts\python.exe .\main.py --input "C:\Users\DELL\Desktop\audio_merged_transcription.md" --db-backend sqlcmd
+
+..\..\.venv\Scripts\python.exe .\data_cleaning\Qdrant\qdrant_sqlserver_sync.py --recreate
+
+..\..\.venv\Scripts\python.exe -m uvicorn data_cleaning.integration.open_database_api:app --host 0.0.0.0 --port 18080
+
+
+
+
+
+
+
+https://pay.ldxp.cn/shop/NUX4KNC4
+
+https://hero-sms.com/cn/profile/personal-information
+
+
+
+# 1. 启动 SQL Server 2022，并初始化 getai/dev
+cd "D:\wkt\ai-ie-backend-feature-rag-new (1)\ai-ie-backend\app\SQL_RAG"
+.\check-connection.ps1
+
+# 2. 启动项目基础服务：Redis、Qdrant 等
+cd "D:\wkt\ai-ie-backend-feature-rag-new (1)\ai-ie-backend"
+docker compose up -d
+
+# 3. 启动后端 API
+uvicorn app.main:app --host 0.0.0.0 --port 8000 --log-config scripts/uvicorn-log-config.yaml
+
+# 4. 启动 Celery Worker
+celery -A config.celery worker -l INFO --pool=threads --concurrency=4
+
+# 5. 启动 Celery Beat
+celery -A config.celery beat -l INFO
+
+docker exec -it sql-rag-sqlserver-2022 /opt/mssql-tools18/bin/sqlcmd -S localhost -U dev -P 123456 -C -d getai
+
+连接名: SQL_RAG_getai
+主机: 127.0.0.1,1433
+初始数据库: getai
+验证: SQL Server 验证
+用户名: dev
+密码: 123456
