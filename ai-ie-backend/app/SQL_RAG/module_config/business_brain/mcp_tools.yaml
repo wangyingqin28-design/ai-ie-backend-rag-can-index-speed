@@ -1,0 +1,17 @@
+# SQL_RAG MCP 工具统一注册标准。
+mcp_gateway:
+  name: sql-rag-agent-mcp-gateway
+  tools:
+    - name: sql_rag_retrieve
+      role: LlamaIndex + Qdrant 语义召回。
+    - name: sql_rag_graph_expand
+      role: SQL Server 关系表或 Neo4j PropertyGraph 多跳推理。
+    - name: sql_rag_memory_read
+      role: LangGraph checkpoint、画像记忆和 Graphiti 情景记忆读取。
+    - name: sql_rag_business_action
+      role: 本地 SQL Server 工单、转人工、跟进和画像动作执行。
+policy:
+  langgraph_is_orchestrator: true
+  mcp_is_external_tool_standard: true
+  no_fixed_business_flow: true
+

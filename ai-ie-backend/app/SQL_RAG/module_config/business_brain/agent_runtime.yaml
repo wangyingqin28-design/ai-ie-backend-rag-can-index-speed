@@ -1,0 +1,21 @@
+# SQL_RAG 商业级智能客服业务脑运行配置。
+runtime:
+  orchestrator: langgraph
+  planner_model: qwen_agent_openai_compatible
+  max_tool_iterations_env: AGENT_MAX_TOOL_ITERATIONS
+  default_max_tool_iterations: 8
+tools:
+  rag_tool: sql_rag_retrieve
+  graph_tool: sql_rag_graph_expand
+  memory_tool: sql_rag_memory_read
+  business_tool: sql_rag_business_action
+service:
+  host: 0.0.0.0
+  port: 18180
+  eager_start: false
+contracts:
+  answer_actions:
+    - answer
+    - clarify
+    - transfer_human
+    - execute

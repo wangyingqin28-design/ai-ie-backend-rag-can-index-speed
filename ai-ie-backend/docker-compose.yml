@@ -1,0 +1,92 @@
+volumes:
+  getrag-redis-data: {}
+  getrag-qdrant-data: {}
+  getrag-qdrant-snapshots: {}
+
+services:
+  # ==============================================
+  # Infrastructure Services (always available)
+  # ==============================================
+
+  redis:
+    image: redis/redis-stack:7.4.0-v7
+    container_name: getrag-redis
+    volumes:
+      - getrag-redis-data:/data
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD-SHELL", "redis-cli ping | grep PONG"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+      start_period: 5s  
+
+  qdrant:
+    image: qdrant/qdrant:v1.15.5
+    container_name: getrag-qdrant
+    volumes:
+      - getrag-qdrant-data:/qdrant/storage
+      - getrag-qdrant-snapshots:/qdrant/snapshots
+    ports:
+      - "6333:6333"
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z localhost 6333 || timeout 3 bash -c '</dev/tcp/localhost/6333' || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+  qdrant-backup:
+    image: nicolaka/netshoot:v0.14
+    container_name: getrag-qdrant-backup
+    depends_on:
+      qdrant:
+        condition: service_healthy      
+    dns:
+      - 8.8.8.8
+      - 114.114.114.114        
+    command:
+      - /bin/sh
+      - -c
+      - |
+        echo "* 18 * * * curl -sf -X POST http://qdrant:6333/snapshots > /tmp/cron-qdrant.log 2>&1" > /etc/crontabs/root
+        crond -f
+    restart: unless-stopped
+
+  qdrant-restore:
+    image: qdrant/qdrant:v1.13.4
+    container_name: getrag-qdrant-restore
+    profiles: ["restore"]
+    volumes:
+      - getrag-qdrant-data:/qdrant/storage
+      - getrag-qdrant-snapshots:/qdrant/snapshots
+    networks:
+      - getrag_pure
+    command:
+      - /bin/sh
+      - -c
+      - |
+        set -e
+        SNAPSHOT_FILE=/qdrant/snapshots/full-snapshot-2025-12-25-08-38-04.snapshot
+        STORAGE_DIR=/qdrant/storage
+
+        if [ "$$(ls -A $${STORAGE_DIR} 2>/dev/null | wc -l)" -ne 0 ]; then
+          echo "[Qdrant-Restore] Storage not empty, skip restore"
+          exit 0
+        fi
+
+        if [ ! -f "$${SNAPSHOT_FILE}" ]; then
+          echo "[Qdrant-Restore] Snapshot not found: $${SNAPSHOT_FILE}"
+          exit 1
+        fi
+
+        echo "[Qdrant-Restore] Restoring from snapshot $${SNAPSHOT_FILE}"
+        /qdrant/qdrant --storage-snapshot "$${SNAPSHOT_FILE}"
+        echo "[Qdrant-Restore] Restore completed"   
+
+networks:
+  default:
+    name: getrag_default
+  getrag_pure:
+    name: getrag_pure

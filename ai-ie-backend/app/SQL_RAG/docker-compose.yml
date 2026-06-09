@@ -1,0 +1,95 @@
+volumes:
+  sql-rag-mssql-data: {}
+  sql-rag-qdrant-data: {}
+  sql-rag-qdrant-snapshots: {}
+  # 2026-06-04 16:33:54 新增原因：持久化 Neo4j 多跳三元组图谱数据。
+  sql-rag-neo4j-data: {}
+  # 2026-06-04 16:33:54 新增原因：持久化 Neo4j 日志，便于排查图谱写入问题。
+  sql-rag-neo4j-logs: {}
+
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sql-rag-sqlserver-2022
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: "Developer"
+      MSSQL_SA_PASSWORD: "${MSSQL_SA_PASSWORD:-SqlRag@2026!}"
+    ports:
+      - "${MSSQL_PORT:-1433}:1433"
+    volumes:
+      - sql-rag-mssql-data:/var/opt/mssql
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "(/opt/mssql-tools18/bin/sqlcmd -S localhost -U sa -P \"$${MSSQL_SA_PASSWORD}\" -C -Q \"SELECT 1\" || /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P \"$${MSSQL_SA_PASSWORD}\" -Q \"SELECT 1\") >/dev/null 2>&1"
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+      start_period: 30s
+    restart: unless-stopped
+
+  init-db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sql-rag-sqlserver-init
+    depends_on:
+      sqlserver:
+        condition: service_healthy
+    environment:
+      MSSQL_SA_PASSWORD: "${MSSQL_SA_PASSWORD:-SqlRag@2026!}"
+      APP_DB_NAME: "${APP_DB_NAME:-getai}"
+      APP_DB_USER: "${APP_DB_USER:-dev}"
+      APP_DB_PASSWORD: "${APP_DB_PASSWORD:-123456}"
+    volumes:
+      - ./init:/init:ro
+    command:
+      - /bin/bash
+      - /init/init-db.sh
+    restart: "no"
+
+  qdrant:
+    image: qdrant/qdrant:v1.15.5
+    container_name: sql-rag-qdrant
+    ports:
+      - "${QDRANT_PORT:-6333}:6333"
+    volumes:
+      - sql-rag-qdrant-data:/qdrant/storage
+      - sql-rag-qdrant-snapshots:/qdrant/snapshots
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z localhost 6333 || timeout 3 bash -c '</dev/tcp/localhost/6333' || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+    restart: unless-stopped
+
+  # 2026-06-04 16:33:54 新增原因：提供真实 Neo4j 多跳三元组图谱后端，避免图谱只停留在 SQL mention 表。
+  neo4j:
+    # 2026-06-04 16:33:54 新增原因：使用 Neo4j 5 LTS 系列兼容 Python neo4j 5.x 驱动。
+    image: neo4j:5.26-community
+    # 2026-06-04 16:33:54 新增原因：固定容器名，便于本地健康检查和重启。
+    container_name: sql-rag-neo4j
+    # 2026-06-04 16:33:54 新增原因：配置默认认证，和 SQL_RAG/.env 保持一致。
+    environment:
+      NEO4J_AUTH: "${NEO4J_USER:-neo4j}/${NEO4J_PASSWORD:-SqlRagNeo4j@2026}"
+      NEO4J_server_memory_heap_initial__size: "512m"
+      NEO4J_server_memory_heap_max__size: "1g"
+    # 2026-06-04 16:33:54 新增原因：暴露浏览器控制台和 Bolt 端口。
+    ports:
+      - "${NEO4J_HTTP_PORT:-7474}:7474"
+      - "${NEO4J_BOLT_PORT:-7687}:7687"
+    # 2026-06-04 16:33:54 新增原因：挂载图谱数据和日志卷。
+    volumes:
+      - sql-rag-neo4j-data:/data
+      - sql-rag-neo4j-logs:/logs
+    # 2026-06-04 16:33:54 新增原因：用 cypher-shell 验证 Neo4j 可用后再让业务脑健康检查通过。
+    healthcheck:
+      test: ["CMD-SHELL", "cypher-shell -u \"$${NEO4J_AUTH%%/*}\" -p \"$${NEO4J_AUTH#*/}\" 'RETURN 1' >/dev/null 2>&1"]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+      start_period: 30s
+    # 2026-06-04 16:33:54 新增原因：本地开发环境异常退出后自动恢复图谱服务。
+    restart: unless-stopped

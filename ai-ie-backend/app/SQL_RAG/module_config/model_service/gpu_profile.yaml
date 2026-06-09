@@ -1,0 +1,22 @@
+# SQL_RAG 本地 Qwen 模型部署 GPU 档位标准。
+tiers:
+  no_cuda_gpu:
+    can_run_qwen35_35b: false
+    recommendation: 只运行 SQL_RAG 后端，调用远程 OpenAI-compatible Qwen 服务。
+  lightweight_only:
+    max_vram_gb: 16
+    can_run_qwen35_35b: false
+    recommendation: 仅建议 Qwen3.5-0.8B/2B 量化模型。
+  small_qwen_local_only:
+    min_vram_gb: 24
+    can_run_qwen35_35b: false
+    recommendation: 可跑 Qwen3.5-4B/9B 量化模型，不建议承载商业级业务脑。
+  qwen35_35b_trial:
+    min_vram_gb: 48
+    can_run_qwen35_35b: true
+    recommendation: 可尝试 Qwen3.5-35B-A3B-FP8，必须降低上下文并压测。
+  qwen35_35b_ready:
+    min_vram_gb: 80
+    can_run_qwen35_35b: true
+    recommendation: 推荐用于 Qwen3.5-35B-A3B-FP8 内网试点和业务脑服务。
+

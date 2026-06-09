@@ -1,0 +1,1537 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d13" for="edge" attr.name="truncate" attr.type="string"/>
+<key id="d12" for="edge" attr.name="created_at" attr.type="long"/>
+<key id="d11" for="edge" attr.name="file_path" attr.type="string"/>
+<key id="d10" for="edge" attr.name="source_id" attr.type="string"/>
+<key id="d9" for="edge" attr.name="keywords" attr.type="string"/>
+<key id="d8" for="edge" attr.name="description" attr.type="string"/>
+<key id="d7" for="edge" attr.name="weight" attr.type="double"/>
+<key id="d6" for="node" attr.name="truncate" attr.type="string"/>
+<key id="d5" for="node" attr.name="created_at" attr.type="long"/>
+<key id="d4" for="node" attr.name="file_path" attr.type="string"/>
+<key id="d3" for="node" attr.name="source_id" attr.type="string"/>
+<key id="d2" for="node" attr.name="description" attr.type="string"/>
+<key id="d1" for="node" attr.name="entity_type" attr.type="string"/>
+<key id="d0" for="node" attr.name="entity_id" attr.type="string"/>
+<graph edgedefault="undirected"><node id="顾客">
+  <data key="d0">顾客</data>
+  <data key="d1">person</data>
+  <data key="d2">在客服对话中发起咨询、投诉和订单操作的用户。</data>
+  <data key="d3">chunk-9ccaceafe1ed63f81745889dbeef0edf</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440384</data>
+  <data key="d6"></data>
+</node>
+<node id="裙子">
+  <data key="d0">裙子</data>
+  <data key="d1">artifact</data>
+  <data key="d2">顾客咨询的商品，颜色为蓝色，尺寸为大号。&lt;SEP&gt;用户咨询是否有大号及蓝色的具体商品。</data>
+  <data key="d3">chunk-9ccaceafe1ed63f81745889dbeef0edf&lt;SEP&gt;chunk-17db1dff2645239b8b8534d9c4d9afde</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440384</data>
+  <data key="d6"></data>
+</node>
+<node id="运动鞋">
+  <data key="d0">运动鞋</data>
+  <data key="d1">artifact</data>
+  <data key="d2">顾客查询发货状态的商品。</data>
+  <data key="d3">chunk-9ccaceafe1ed63f81745889dbeef0edf</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440385</data>
+  <data key="d6"></data>
+</node>
+<node id="DA123456">
+  <data key="d0">DA123456</data>
+  <data key="d1">data</data>
+  <data key="d2">顾客投诉配送延误时提供的快递单号。</data>
+  <data key="d3">chunk-9ccaceafe1ed63f81745889dbeef0edf</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440386</data>
+  <data key="d6"></data>
+</node>
+<node id="SF123456">
+  <data key="d0">SF123456</data>
+  <data key="d1">data</data>
+  <data key="d2">顾客投诉虚假签收时提供的快递单号。</data>
+  <data key="d3">chunk-9ccaceafe1ed63f81745889dbeef0edf</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440386</data>
+  <data key="d6"></data>
+</node>
+<node id="20240316005">
+  <data key="d0">20240316005</data>
+  <data key="d1">data</data>
+  <data key="d2">顾客要求取消的订单编号。</data>
+  <data key="d3">chunk-9ccaceafe1ed63f81745889dbeef0edf</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440387</data>
+  <data key="d6"></data>
+</node>
+<node id="99876">
+  <data key="d0">99876</data>
+  <data key="d1">data</data>
+  <data key="d2">顾客查询物流配送状态的订单编号。</data>
+  <data key="d3">chunk-9ccaceafe1ed63f81745889dbeef0edf</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440387</data>
+  <data key="d6"></data>
+</node>
+<node id="商品损坏">
+  <data key="d0">商品损坏</data>
+  <data key="d1">concept</data>
+  <data key="d2">顾客投诉的原因，表示收到的商品是坏的。</data>
+  <data key="d3">chunk-9ccaceafe1ed63f81745889dbeef0edf</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440388</data>
+  <data key="d6"></data>
+</node>
+<node id="配送延误">
+  <data key="d0">配送延误</data>
+  <data key="d1">concept</data>
+  <data key="d2">顾客投诉的原因，表示快递等待时间过长太慢。</data>
+  <data key="d3">chunk-9ccaceafe1ed63f81745889dbeef0edf</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440390</data>
+  <data key="d6"></data>
+</node>
+<node id="虚假签收">
+  <data key="d0">虚假签收</data>
+  <data key="d1">concept</data>
+  <data key="d2">顾客投诉的原因，表示快递显示已签收但实际未收到。</data>
+  <data key="d3">chunk-9ccaceafe1ed63f81745889dbeef0edf</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440391</data>
+  <data key="d6"></data>
+</node>
+<node id="营业时间">
+  <data key="d0">营业时间</data>
+  <data key="d1">concept</data>
+  <data key="d2">客服提供的服务时间，在线客服为9:00-22:00，电话客服24小时。</data>
+  <data key="d3">chunk-9ccaceafe1ed63f81745889dbeef0edf</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440391</data>
+  <data key="d6"></data>
+</node>
+<node id="退货政策">
+  <data key="d0">退货政策</data>
+  <data key="d1">concept</data>
+  <data key="d2">7天无理由退换货的售后规则，要求商品不影响二次销售。</data>
+  <data key="d3">chunk-9ccaceafe1ed63f81745889dbeef0edf</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440392</data>
+  <data key="d6"></data>
+</node>
+<node id="电子发票">
+  <data key="d0">电子发票</data>
+  <data key="d1">data</data>
+  <data key="d2">客服支持开具的发票类型，可在下单时勾选获取。</data>
+  <data key="d3">chunk-9ccaceafe1ed63f81745889dbeef0edf</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440392</data>
+  <data key="d6"></data>
+</node>
+<node id="蓝色">
+  <data key="d0">蓝色</data>
+  <data key="d1">concept</data>
+  <data key="d2">裙子的颜色属性。</data>
+  <data key="d3">chunk-9ccaceafe1ed63f81745889dbeef0edf</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440394</data>
+  <data key="d6"></data>
+</node>
+<node id="大号">
+  <data key="d0">大号</data>
+  <data key="d1">concept</data>
+  <data key="d2">裙子的尺寸属性。</data>
+  <data key="d3">chunk-9ccaceafe1ed63f81745889dbeef0edf</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440394</data>
+  <data key="d6"></data>
+</node>
+<node id="人工客服">
+  <data key="d0">人工客服</data>
+  <data key="d1">concept</data>
+  <data key="d2">提供人工服务支持的客服团队。&lt;SEP&gt;顾客请求转接的人工服务人员，用于处理更复杂的问题。</data>
+  <data key="d3">chunk-9ccaceafe1ed63f81745889dbeef0edf&lt;SEP&gt;chunk-62b4a8e0e10637ad68348fe8025c14f2</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440394</data>
+  <data key="d6"></data>
+</node>
+<node id="优惠券">
+  <data key="d0">优惠券</data>
+  <data key="d1">artifact</data>
+  <data key="d2">促销手段，当前有满200减20的优惠券可领取。&lt;SEP&gt;因快递配送延误而向顾客提供的补偿凭证。</data>
+  <data key="d3">chunk-9ccaceafe1ed63f81745889dbeef0edf&lt;SEP&gt;chunk-62b4a8e0e10637ad68348fe8025c14f2</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440396</data>
+  <data key="d6"></data>
+</node>
+<node id="退款">
+  <data key="d0">退款</data>
+  <data key="d1">event</data>
+  <data key="d2">取消订单后退回货款的过程，预计需要1-3个工作日。</data>
+  <data key="d3">chunk-9ccaceafe1ed63f81745889dbeef0edf</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440396</data>
+  <data key="d6"></data>
+</node>
+<node id="快递公司">
+  <data key="d0">快递公司</data>
+  <data key="d1">organization</data>
+  <data key="d2">负责快递配送并在投诉时协助核实签收情况的物流承运商&lt;SEP&gt;负责包裹配送的物流企业，在遇到签收异常时需由其进行核实。</data>
+  <data key="d3">chunk-9ccaceafe1ed63f81745889dbeef0edf&lt;SEP&gt;chunk-43d8ab5250d2ce1e04990d994334bdc6</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440397</data>
+  <data key="d6"></data>
+</node>
+<node id="13912345678">
+  <data key="d0">13912345678</data>
+  <data key="d1">data</data>
+  <data key="d2">手机号，用于查询物流订单。</data>
+  <data key="d3">chunk-62b4a8e0e10637ad68348fe8025c14f2</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440398</data>
+  <data key="d6"></data>
+</node>
+<node id="776655">
+  <data key="d0">776655</data>
+  <data key="d1">data</data>
+  <data key="d2">订单号，与手机号13912345678关联。</data>
+  <data key="d3">chunk-62b4a8e0e10637ad68348fe8025c14f2</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440399</data>
+  <data key="d6"></data>
+</node>
+<node id="YT5678">
+  <data key="d0">YT5678</data>
+  <data key="d1">data</data>
+  <data key="d2">运单号，物流状态未更新。</data>
+  <data key="d3">chunk-62b4a8e0e10637ad68348fe8025c14f2</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440399</data>
+  <data key="d6"></data>
+</node>
+<node id="JD98765">
+  <data key="d0">JD98765</data>
+  <data key="d1">data</data>
+  <data key="d2">运单号，因快递员态度差被投诉。</data>
+  <data key="d3">chunk-62b4a8e0e10637ad68348fe8025c14f2</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440400</data>
+  <data key="d6"></data>
+</node>
+<node id="SH202406">
+  <data key="d0">SH202406</data>
+  <data key="d1">data</data>
+  <data key="d2">订单号，正在派送中。</data>
+  <data key="d3">chunk-62b4a8e0e10637ad68348fe8025c14f2</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440400</data>
+  <data key="d6"></data>
+</node>
+<node id="111222">
+  <data key="d0">111222</data>
+  <data key="d1">data</data>
+  <data key="d2">订单号，用于换货申请。</data>
+  <data key="d3">chunk-62b4a8e0e10637ad68348fe8025c14f2</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440402</data>
+  <data key="d6"></data>
+</node>
+<node id="A123">
+  <data key="d0">A123</data>
+  <data key="d1">data</data>
+  <data key="d2">订单号，用于退货申请。</data>
+  <data key="d3">chunk-62b4a8e0e10637ad68348fe8025c14f2</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440402</data>
+  <data key="d6"></data>
+</node>
+<node id="上海">
+  <data key="d0">上海</data>
+  <data key="d1">location</data>
+  <data key="d2">发件地点，用于查询从该地发出的快递。</data>
+  <data key="d3">chunk-62b4a8e0e10637ad68348fe8025c14f2</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440403</data>
+  <data key="d6"></data>
+</node>
+<node id="微信支付">
+  <data key="d0">微信支付</data>
+  <data key="d1">method</data>
+  <data key="d2">支付方式，用户尝试用此方式查询订单。&lt;SEP&gt;客户使用的一种支付方式，在缺少订单号时被提及作为查询订单的依据。</data>
+  <data key="d3">chunk-62b4a8e0e10637ad68348fe8025c14f2&lt;SEP&gt;chunk-a920e7b36a1aea78046578f796206e63</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440404</data>
+  <data key="d6"></data>
+</node>
+<node id="VIP会员">
+  <data key="d0">VIP会员</data>
+  <data key="d1">concept</data>
+  <data key="d2">高级会员等级，消费满1000元可升级，享有专属特权。</data>
+  <data key="d3">chunk-62b4a8e0e10637ad68348fe8025c14f2</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440404</data>
+  <data key="d6"></data>
+</node>
+<node id="快递员">
+  <data key="d0">快递员</data>
+  <data key="d1">person</data>
+  <data key="d2">配送人员，可能因服务态度被投诉。</data>
+  <data key="d3">chunk-62b4a8e0e10637ad68348fe8025c14f2</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440404</data>
+  <data key="d6"></data>
+</node>
+<node id="物流不更新">
+  <data key="d0">物流不更新</data>
+  <data key="d1">concept</data>
+  <data key="d2">投诉原因，指物流信息长时间未变动。</data>
+  <data key="d3">chunk-62b4a8e0e10637ad68348fe8025c14f2</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440405</data>
+  <data key="d6"></data>
+</node>
+<node id="态度差">
+  <data key="d0">态度差</data>
+  <data key="d1">concept</data>
+  <data key="d2">投诉原因，指快递员服务态度不好。</data>
+  <data key="d3">chunk-62b4a8e0e10637ad68348fe8025c14f2</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440405</data>
+  <data key="d6"></data>
+</node>
+<node id="与图片不符">
+  <data key="d0">与图片不符</data>
+  <data key="d1">concept</data>
+  <data key="d2">投诉原因，指收到的商品与展示图片不一致。</data>
+  <data key="d3">chunk-62b4a8e0e10637ad68348fe8025c14f2</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440407</data>
+  <data key="d6"></data>
+</node>
+<node id="会员特权">
+  <data key="d0">会员特权</data>
+  <data key="d1">concept</data>
+  <data key="d2">VIP会员的专属权益，包括9折优惠、优先发货和专属客服。</data>
+  <data key="d3">chunk-62b4a8e0e10637ad68348fe8025c14f2</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440407</data>
+  <data key="d6"></data>
+</node>
+<node id="换货">
+  <data key="d0">换货</data>
+  <data key="d1">event</data>
+  <data key="d2">售后服务，更换同款不同颜色的商品。&lt;SEP&gt;用户因尺码不合适等原因要求更换商品的业务行为。&lt;SEP&gt;客户最初被误解的售后服务类型，后被客户更正为退货。</data>
+  <data key="d3">chunk-62b4a8e0e10637ad68348fe8025c14f2&lt;SEP&gt;chunk-17db1dff2645239b8b8534d9c4d9afde&lt;SEP&gt;chunk-a920e7b36a1aea78046578f796206e63</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440408</data>
+  <data key="d6"></data>
+</node>
+<node id="退货">
+  <data key="d0">退货</data>
+  <data key="d1">event</data>
+  <data key="d2">售后服务，退回购买的商品。&lt;SEP&gt;用户因商品质量等问题要求退回已购商品的业务行为。&lt;SEP&gt;客户明确要求办理的售后服务类型，要求退回商品。</data>
+  <data key="d3">chunk-62b4a8e0e10637ad68348fe8025c14f2&lt;SEP&gt;chunk-17db1dff2645239b8b8534d9c4d9afde&lt;SEP&gt;chunk-a920e7b36a1aea78046578f796206e63</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440408</data>
+  <data key="d6"></data>
+</node>
+<node id="快递">
+  <data key="d0">快递</data>
+  <data key="d1">concept</data>
+  <data key="d2">从特定地点发出的包裹，可通过运单号查询状态。</data>
+  <data key="d3">chunk-62b4a8e0e10637ad68348fe8025c14f2</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440410</data>
+  <data key="d6"></data>
+</node>
+<node id="订单号">
+  <data key="d0">订单号</data>
+  <data key="d1">data</data>
+  <data key="d2">用于唯一标识和查询具体订单的数据标识符。&lt;SEP&gt;用于查询、取消或退换货的订单唯一标识符。&lt;SEP&gt;用于查询订单状态的唯一标识符。</data>
+  <data key="d3">chunk-62b4a8e0e10637ad68348fe8025c14f2&lt;SEP&gt;chunk-17db1dff2645239b8b8534d9c4d9afde&lt;SEP&gt;chunk-a920e7b36a1aea78046578f796206e63</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440411</data>
+  <data key="d6"></data>
+</node>
+<node id="普通会员">
+  <data key="d0">普通会员</data>
+  <data key="d1">concept</data>
+  <data key="d2">通过注册即可成为的基础会员等级。</data>
+  <data key="d3">chunk-62b4a8e0e10637ad68348fe8025c14f2</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440411</data>
+  <data key="d6"></data>
+</node>
+<node id="取消订单">
+  <data key="d0">取消订单</data>
+  <data key="d1">concept</data>
+  <data key="d2">客户不再需要商品时申请的取消订单操作。</data>
+  <data key="d3">chunk-62b4a8e0e10637ad68348fe8025c14f2</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440411</data>
+  <data key="d6"></data>
+</node>
+<node id="退换货">
+  <data key="d0">退换货</data>
+  <data key="d1">method</data>
+  <data key="d2">针对商品与图片不符等情况的售后处理方式。</data>
+  <data key="d3">chunk-62b4a8e0e10637ad68348fe8025c14f2</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440411</data>
+  <data key="d6"></data>
+</node>
+<node id="忘记密码">
+  <data key="d0">忘记密码</data>
+  <data key="d1">method</data>
+  <data key="d2">账号登录不上时的解决途径。</data>
+  <data key="d3">chunk-62b4a8e0e10637ad68348fe8025c14f2</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440413</data>
+  <data key="d6"></data>
+</node>
+<node id="注册手机号">
+  <data key="d0">注册手机号</data>
+  <data key="d1">data</data>
+  <data key="d2">用于查询订单的手机号码，需为注册时的号码。&lt;SEP&gt;系统支持的用于查询订单状态的替代验证信息。</data>
+  <data key="d3">chunk-62b4a8e0e10637ad68348fe8025c14f2&lt;SEP&gt;chunk-a920e7b36a1aea78046578f796206e63</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440413</data>
+  <data key="d6"></data>
+</node>
+<node id="机器人">
+  <data key="d0">机器人</data>
+  <data key="d1">artifact</data>
+  <data key="d2">客服机器人，被用户称呼并告别。</data>
+  <data key="d3">chunk-62b4a8e0e10637ad68348fe8025c14f2</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440414</data>
+  <data key="d6"></data>
+</node>
+<node id="运输中">
+  <data key="d0">运输中</data>
+  <data key="d1">concept</data>
+  <data key="d2">物流订单的一种状态，表示包裹正在运送途中。</data>
+  <data key="d3">chunk-62b4a8e0e10637ad68348fe8025c14f2</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440415</data>
+  <data key="d6"></data>
+</node>
+<node id="派送中">
+  <data key="d0">派送中</data>
+  <data key="d1">concept</data>
+  <data key="d2">物流订单的一种状态，表示包裹正在交由快递员派送。</data>
+  <data key="d3">chunk-62b4a8e0e10637ad68348fe8025c14f2</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440416</data>
+  <data key="d6"></data>
+</node>
+<node id="满200减20">
+  <data key="d0">满200减20</data>
+  <data key="d1">concept</data>
+  <data key="d2">当前可领取的优惠券满减规则。</data>
+  <data key="d3">chunk-62b4a8e0e10637ad68348fe8025c14f2</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440416</data>
+  <data key="d6"></data>
+</node>
+<node id="账号登录不上">
+  <data key="d0">账号登录不上</data>
+  <data key="d1">event</data>
+  <data key="d2">用户遇到的无法登录账号的问题。</data>
+  <data key="d3">chunk-62b4a8e0e10637ad68348fe8025c14f2</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440416</data>
+  <data key="d6"></data>
+</node>
+<node id="小慧">
+  <data key="d0">小慧</data>
+  <data key="d1">other</data>
+  <data key="d2">智能客服助手的名称，负责回答用户咨询并处理订单、物流、退换货等服务。</data>
+  <data key="d3">chunk-17db1dff2645239b8b8534d9c4d9afde</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440418</data>
+  <data key="d6"></data>
+</node>
+<node id="订单状态">
+  <data key="d0">订单状态</data>
+  <data key="d1">concept</data>
+  <data key="d2">用户查询订单当前进度和发货情况的意图或业务概念。</data>
+  <data key="d3">chunk-17db1dff2645239b8b8534d9c4d9afde</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440418</data>
+  <data key="d6"></data>
+</node>
+<node id="物流查询">
+  <data key="d0">物流查询</data>
+  <data key="d1">concept</data>
+  <data key="d2">用户查询快递运输位置和配送状态的意图或业务概念。&lt;SEP&gt;用户通过手机号查询快递单号或物流状态的意图或流程。</data>
+  <data key="d3">chunk-17db1dff2645239b8b8534d9c4d9afde&lt;SEP&gt;chunk-43d8ab5250d2ce1e04990d994334bdc6</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440418</data>
+  <data key="d6"></data>
+</node>
+<node id="商品咨询">
+  <data key="d0">商品咨询</data>
+  <data key="d1">concept</data>
+  <data key="d2">用户询问商品库存、颜色、尺码等信息的意图或业务概念。</data>
+  <data key="d3">chunk-17db1dff2645239b8b8534d9c4d9afde</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440420</data>
+  <data key="d6"></data>
+</node>
+<node id="物流单号">
+  <data key="d0">物流单号</data>
+  <data key="d1">data</data>
+  <data key="d2">用于追踪快递包裹运输轨迹的数据标识符。</data>
+  <data key="d3">chunk-17db1dff2645239b8b8534d9c4d9afde</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440421</data>
+  <data key="d6"></data>
+</node>
+<node id="手机号">
+  <data key="d0">手机号</data>
+  <data key="d1">data</data>
+  <data key="d2">用户用于关联订单和查询物流的联系方式数据。</data>
+  <data key="d3">chunk-17db1dff2645239b8b8534d9c4d9afde</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440422</data>
+  <data key="d6"></data>
+</node>
+<node id="退货原因">
+  <data key="d0">退货原因</data>
+  <data key="d1">data</data>
+  <data key="d2">触发退货或换货申请的具体理由，如质量问题或尺码问题。</data>
+  <data key="d3">chunk-17db1dff2645239b8b8534d9c4d9afde</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440422</data>
+  <data key="d6"></data>
+</node>
+<node id="尺码">
+  <data key="d0">尺码</data>
+  <data key="d1">data</data>
+  <data key="d2">商品的规格属性数据，例如L码或大号。</data>
+  <data key="d3">chunk-17db1dff2645239b8b8534d9c4d9afde</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440422</data>
+  <data key="d6"></data>
+</node>
+<node id="颜色">
+  <data key="d0">颜色</data>
+  <data key="d1">data</data>
+  <data key="d2">商品的外观属性数据，例如蓝色。</data>
+  <data key="d3">chunk-17db1dff2645239b8b8534d9c4d9afde</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440424</data>
+  <data key="d6"></data>
+</node>
+<node id="手机壳">
+  <data key="d0">手机壳</data>
+  <data key="d1">artifact</data>
+  <data key="d2">用户在订单中购买的具体商品。</data>
+  <data key="d3">chunk-17db1dff2645239b8b8534d9c4d9afde</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440424</data>
+  <data key="d6"></data>
+</node>
+<node id="衬衫">
+  <data key="d0">衬衫</data>
+  <data key="d1">artifact</data>
+  <data key="d2">用户申请更换尺码的具体商品。</data>
+  <data key="d3">chunk-17db1dff2645239b8b8534d9c4d9afde</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440424</data>
+  <data key="d6"></data>
+</node>
+<node id="保温杯">
+  <data key="d0">保温杯</data>
+  <data key="d1">artifact</data>
+  <data key="d2">用户咨询是否有货的具体商品。</data>
+  <data key="d3">chunk-17db1dff2645239b8b8534d9c4d9afde</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440426</data>
+  <data key="d6"></data>
+</node>
+<node id="20240315001">
+  <data key="d0">20240315001</data>
+  <data key="d1">data</data>
+  <data key="d2">具体的订单号实例，涉及手机壳购买及退货申请。</data>
+  <data key="d3">chunk-17db1dff2645239b8b8534d9c4d9afde</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440426</data>
+  <data key="d6"></data>
+</node>
+<node id="889922">
+  <data key="d0">889922</data>
+  <data key="d1">data</data>
+  <data key="d2">具体的订单号实例，因尺码问题申请换货。</data>
+  <data key="d3">chunk-17db1dff2645239b8b8534d9c4d9afde</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440428</data>
+  <data key="d6"></data>
+</node>
+<node id="SF998877">
+  <data key="d0">SF998877</data>
+  <data key="d1">data</data>
+  <data key="d2">具体的物流单号实例，状态为已到达广州集散中心。</data>
+  <data key="d3">chunk-17db1dff2645239b8b8534d9c4d9afde</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440428</data>
+  <data key="d6"></data>
+</node>
+<node id="138xxxx">
+  <data key="d0">138xxxx</data>
+  <data key="d1">data</data>
+  <data key="d2">具体的手机号实例，用于查询订单和物流。</data>
+  <data key="d3">chunk-17db1dff2645239b8b8534d9c4d9afde</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440428</data>
+  <data key="d6"></data>
+</node>
+<node id="广州集散中心">
+  <data key="d0">广州集散中心</data>
+  <data key="d1">location</data>
+  <data key="d2">快递包裹中转和暂存的地理位置，运单SF998877已到达此地。</data>
+  <data key="d3">chunk-17db1dff2645239b8b8534d9c4d9afde</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440430</data>
+  <data key="d6"></data>
+</node>
+<node id="SF1234567890">
+  <data key="d0">SF1234567890</data>
+  <data key="d1">data</data>
+  <data key="d2">订单20240315001发货时生成的具体物流单号实例。</data>
+  <data key="d3">chunk-17db1dff2645239b8b8534d9c4d9afde</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440430</data>
+  <data key="d6"></data>
+</node>
+<node id="质量问题">
+  <data key="d0">质量问题</data>
+  <data key="d1">concept</data>
+  <data key="d2">商品存在缺陷或损坏的情况，是用户发起退货的具体原因。</data>
+  <data key="d3">chunk-17db1dff2645239b8b8534d9c4d9afde</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440430</data>
+  <data key="d6"></data>
+</node>
+<node id="投诉">
+  <data key="d0">投诉</data>
+  <data key="d1">event</data>
+  <data key="d2">用户因未收到却显示签收或商品质量差而表达不满的意图或流程。&lt;SEP&gt;用户因收到的商品损坏而表达不满并要求投诉的行为。</data>
+  <data key="d3">chunk-17db1dff2645239b8b8534d9c4d9afde&lt;SEP&gt;chunk-43d8ab5250d2ce1e04990d994334bdc6</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440430</data>
+  <data key="d6"></data>
+</node>
+<node id="订单A123">
+  <data key="d0">订单A123</data>
+  <data key="d1">data</data>
+  <data key="d2">客户提出退货申请的具体订单标识。</data>
+  <data key="d3">chunk-a920e7b36a1aea78046578f796206e63</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440432</data>
+  <data key="d6"></data>
+</node>
+<node id="订单状态查询">
+  <data key="d0">订单状态查询</data>
+  <data key="d1">concept</data>
+  <data key="d2">客户希望了解订单当前进展的意图。</data>
+  <data key="d3">chunk-a920e7b36a1aea78046578f796206e63</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440432</data>
+  <data key="d6"></data>
+</node>
+<node id="退货订单">
+  <data key="d0">退货订单</data>
+  <data key="d1">concept</data>
+  <data key="d2">用户因退款未到或商品不合适等原因申请退货的意图或流程。</data>
+  <data key="d3">chunk-43d8ab5250d2ce1e04990d994334bdc6</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440433</data>
+  <data key="d6"></data>
+</node>
+<node id="换货订单">
+  <data key="d0">换货订单</data>
+  <data key="d1">concept</data>
+  <data key="d2">用户申请更换商品颜色或款式的意图或流程。</data>
+  <data key="d3">chunk-43d8ab5250d2ce1e04990d994334bdc6</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440434</data>
+  <data key="d6"></data>
+</node>
+<node id="修改地址">
+  <data key="d0">修改地址</data>
+  <data key="d1">concept</data>
+  <data key="d2">用户申请修改订单收货地址的意图或流程。</data>
+  <data key="d3">chunk-43d8ab5250d2ce1e04990d994334bdc6</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440435</data>
+  <data key="d6"></data>
+</node>
+<node id="订单查询">
+  <data key="d0">订单查询</data>
+  <data key="d1">concept</data>
+  <data key="d2">用户查询特定日期订单情况或要求发货提醒的意图或流程。</data>
+  <data key="d3">chunk-43d8ab5250d2ce1e04990d994334bdc6</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440435</data>
+  <data key="d6"></data>
+</node>
+<node id="常见问题解答">
+  <data key="d0">常见问题解答</data>
+  <data key="d1">concept</data>
+  <data key="d2">用户询问如实体店、议价等常规问题的意图或流程。</data>
+  <data key="d3">chunk-43d8ab5250d2ce1e04990d994334bdc6</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440435</data>
+  <data key="d6"></data>
+</node>
+<node id="订单223344">
+  <data key="d0">订单223344</data>
+  <data key="d1">data</data>
+  <data key="d2">一个申请修改收货地址的具体订单编号。</data>
+  <data key="d3">chunk-43d8ab5250d2ce1e04990d994334bdc6</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440435</data>
+  <data key="d6"></data>
+</node>
+<node id="订单1234">
+  <data key="d0">订单1234</data>
+  <data key="d1">data</data>
+  <data key="d2">一个申请发货提醒的具体订单编号。</data>
+  <data key="d3">chunk-43d8ab5250d2ce1e04990d994334bdc6</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440437</data>
+  <data key="d6"></data>
+</node>
+<node id="订单555666">
+  <data key="d0">订单555666</data>
+  <data key="d1">data</data>
+  <data key="d2">一个申请更换其他款式的具体订单编号。</data>
+  <data key="d3">chunk-43d8ab5250d2ce1e04990d994334bdc6</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440437</data>
+  <data key="d6"></data>
+</node>
+<node id="订单776655">
+  <data key="d0">订单776655</data>
+  <data key="d1">data</data>
+  <data key="d2">一个通过手机号查询到的处于运输中状态的订单编号。</data>
+  <data key="d3">chunk-43d8ab5250d2ce1e04990d994334bdc6</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440439</data>
+  <data key="d6"></data>
+</node>
+<node id="北京市朝阳区xxx">
+  <data key="d0">北京市朝阳区xxx</data>
+  <data key="d1">location</data>
+  <data key="d2">订单223344需要更新的新收货地址。</data>
+  <data key="d3">chunk-43d8ab5250d2ce1e04990d994334bdc6</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440440</data>
+  <data key="d6"></data>
+</node>
+<node id="手机号13912345678">
+  <data key="d0">手机号13912345678</data>
+  <data key="d1">data</data>
+  <data key="d2">用户用于查询物流信息的手机号码。</data>
+  <data key="d3">chunk-43d8ab5250d2ce1e04990d994334bdc6</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440440</data>
+  <data key="d6"></data>
+</node>
+<node id="包">
+  <data key="d0">包</data>
+  <data key="d1">artifact</data>
+  <data key="d2">用户购买后因不合适而申请退货的商品。</data>
+  <data key="d3">chunk-43d8ab5250d2ce1e04990d994334bdc6</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440440</data>
+  <data key="d6"></data>
+</node>
+<node id="质检部门">
+  <data key="d0">质检部门</data>
+  <data key="d1">organization</data>
+  <data key="d2">负责接收和处理用户关于商品质量投诉意见的部门。</data>
+  <data key="d3">chunk-43d8ab5250d2ce1e04990d994334bdc6</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440440</data>
+  <data key="d6"></data>
+</node>
+<node id="实体店">
+  <data key="d0">实体店</data>
+  <data key="d1">location</data>
+  <data key="d2">用户询问的线下销售门店，当前商家不存在此类门店。</data>
+  <data key="d3">chunk-43d8ab5250d2ce1e04990d994334bdc6</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440442</data>
+  <data key="d6"></data>
+</node>
+<node id="快递单号SF123456">
+  <data key="d0">快递单号SF123456</data>
+  <data key="d1">data</data>
+  <data key="d2">用户投诉时提供的物流追踪编号</data>
+  <data key="d3">chunk-43d8ab5250d2ce1e04990d994334bdc6</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440442</data>
+  <data key="d6"></data>
+</node>
+<node id="未收到但显示签收">
+  <data key="d0">未收到但显示签收</data>
+  <data key="d1">concept</data>
+  <data key="d2">快递投诉的原因，指商品未收到但物流显示已签收</data>
+  <data key="d3">chunk-43d8ab5250d2ce1e04990d994334bdc6</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440444</data>
+  <data key="d6"></data>
+</node>
+<node id="退款未到">
+  <data key="d0">退款未到</data>
+  <data key="d1">concept</data>
+  <data key="d2">退货订单的查询原因，指退款尚未收到</data>
+  <data key="d3">chunk-43d8ab5250d2ce1e04990d994334bdc6</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440444</data>
+  <data key="d6"></data>
+</node>
+<node id="黑色">
+  <data key="d0">黑色</data>
+  <data key="d1">concept</data>
+  <data key="d2">换货订单中用户要求的商品颜色</data>
+  <data key="d3">chunk-43d8ab5250d2ce1e04990d994334bdc6</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440445</data>
+  <data key="d6"></data>
+</node>
+<node id="3月1号">
+  <data key="d0">3月1号</data>
+  <data key="d1">data</data>
+  <data key="d2">用户查询订单状况时指定的具体日期</data>
+  <data key="d3">chunk-43d8ab5250d2ce1e04990d994334bdc6</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440446</data>
+  <data key="d6"></data>
+</node>
+<node id="不合适">
+  <data key="d0">不合适</data>
+  <data key="d1">concept</data>
+  <data key="d2">退货订单的原因，指商品不符合用户需求</data>
+  <data key="d3">chunk-43d8ab5250d2ce1e04990d994334bdc6</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440446</data>
+  <data key="d6"></data>
+</node>
+<node id="议价功能">
+  <data key="d0">议价功能</data>
+  <data key="d1">method</data>
+  <data key="d2">平台目前不支持的用户讨价还价的功能</data>
+  <data key="d3">chunk-43d8ab5250d2ce1e04990d994334bdc6</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440446</data>
+  <data key="d6"></data>
+</node>
+<node id="人工">
+  <data key="d0">人工</data>
+  <data key="d1">method</data>
+  <data key="d2">转接人工客服的服务方式</data>
+  <data key="d3">chunk-43d8ab5250d2ce1e04990d994334bdc6</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440447</data>
+  <data key="d6"></data>
+</node>
+<node id="退货申请">
+  <data key="d0">退货申请</data>
+  <data key="d1">method</data>
+  <data key="d2">在订单详情中发起退货的操作方法</data>
+  <data key="d3">chunk-43d8ab5250d2ce1e04990d994334bdc6</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440447</data>
+  <data key="d6"></data>
+</node>
+<node id="优惠活动">
+  <data key="d0">优惠活动</data>
+  <data key="d1">event</data>
+  <data key="d2">平台提供的商品促销优惠事件</data>
+  <data key="d3">chunk-43d8ab5250d2ce1e04990d994334bdc6</data>
+  <data key="d4">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d5">1779440449</data>
+  <data key="d6"></data>
+</node>
+<edge source="顾客" target="DA123456">
+  <data key="d7">1.0</data>
+  <data key="d8">顾客因配送延误投诉快递单号DA123456。</data>
+  <data key="d9">投诉,物流延误</data>
+  <data key="d10">chunk-9ccaceafe1ed63f81745889dbeef0edf</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440457</data>
+  <data key="d13"></data>
+</edge>
+<edge source="顾客" target="SF123456">
+  <data key="d7">1.0</data>
+  <data key="d8">顾客因快递显示签收但实际未收到而投诉快递单号SF123456。</data>
+  <data key="d9">投诉,虚假签收</data>
+  <data key="d10">chunk-9ccaceafe1ed63f81745889dbeef0edf</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440459</data>
+  <data key="d13"></data>
+</edge>
+<edge source="顾客" target="20240316005">
+  <data key="d7">1.0</data>
+  <data key="d8">顾客要求取消订单号为20240316005的订单。</data>
+  <data key="d9">取消订单,退款</data>
+  <data key="d10">chunk-9ccaceafe1ed63f81745889dbeef0edf</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440462</data>
+  <data key="d13"></data>
+</edge>
+<edge source="顾客" target="99876">
+  <data key="d7">1.0</data>
+  <data key="d8">顾客查询订单号为99876的物流配送状态。</data>
+  <data key="d9">查询物流,订单状态</data>
+  <data key="d10">chunk-9ccaceafe1ed63f81745889dbeef0edf</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440464</data>
+  <data key="d13"></data>
+</edge>
+<edge source="顾客" target="商品损坏">
+  <data key="d7">1.0</data>
+  <data key="d8">顾客因收到的商品是坏的而发起投诉。</data>
+  <data key="d9">售后问题,投诉</data>
+  <data key="d10">chunk-9ccaceafe1ed63f81745889dbeef0edf</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440467</data>
+  <data key="d13"></data>
+</edge>
+<edge source="顾客" target="裙子">
+  <data key="d7">1.0</data>
+  <data key="d8">顾客咨询蓝色大号裙子的库存情况。</data>
+  <data key="d9">咨询库存,商品属性</data>
+  <data key="d10">chunk-9ccaceafe1ed63f81745889dbeef0edf</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440469</data>
+  <data key="d13"></data>
+</edge>
+<edge source="顾客" target="运动鞋">
+  <data key="d7">1.0</data>
+  <data key="d8">顾客查询运动鞋的发货状态。</data>
+  <data key="d9">商品状态,查询发货</data>
+  <data key="d10">chunk-9ccaceafe1ed63f81745889dbeef0edf</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440472</data>
+  <data key="d13"></data>
+</edge>
+<edge source="顾客" target="退货政策">
+  <data key="d7">1.0</data>
+  <data key="d8">顾客询问退货政策的具体内容。</data>
+  <data key="d9">咨询售后,规则了解</data>
+  <data key="d10">chunk-9ccaceafe1ed63f81745889dbeef0edf</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440476</data>
+  <data key="d13"></data>
+</edge>
+<edge source="顾客" target="电子发票">
+  <data key="d7">1.0</data>
+  <data key="d8">顾客询问是否可以开具电子发票。</data>
+  <data key="d9">咨询开票,服务请求</data>
+  <data key="d10">chunk-9ccaceafe1ed63f81745889dbeef0edf</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440481</data>
+  <data key="d13"></data>
+</edge>
+<edge source="顾客" target="营业时间">
+  <data key="d7">1.0</data>
+  <data key="d8">顾客询问客服的下班时间或营业时间。</data>
+  <data key="d9">咨询服务,时间查询</data>
+  <data key="d10">chunk-9ccaceafe1ed63f81745889dbeef0edf</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440486</data>
+  <data key="d13"></data>
+</edge>
+<edge source="顾客" target="人工客服">
+  <data key="d7">1.0</data>
+  <data key="d8">顾客请求转接人工客服以获得帮助。</data>
+  <data key="d9">服务转接</data>
+  <data key="d10">chunk-9ccaceafe1ed63f81745889dbeef0edf</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440491</data>
+  <data key="d13"></data>
+</edge>
+<edge source="裙子" target="蓝色">
+  <data key="d7">1.0</data>
+  <data key="d8">裙子具有蓝色的颜色属性。</data>
+  <data key="d9">颜色属性</data>
+  <data key="d10">chunk-9ccaceafe1ed63f81745889dbeef0edf</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440472</data>
+  <data key="d13"></data>
+</edge>
+<edge source="裙子" target="大号">
+  <data key="d7">1.0</data>
+  <data key="d8">裙子具有大号的尺寸属性。</data>
+  <data key="d9">尺寸属性</data>
+  <data key="d10">chunk-9ccaceafe1ed63f81745889dbeef0edf</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440477</data>
+  <data key="d13"></data>
+</edge>
+<edge source="裙子" target="颜色">
+  <data key="d7">1.0</data>
+  <data key="d8">裙子被用户指定为蓝色。</data>
+  <data key="d9">属性关联,规格描述</data>
+  <data key="d10">chunk-17db1dff2645239b8b8534d9c4d9afde</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440499</data>
+  <data key="d13"></data>
+</edge>
+<edge source="裙子" target="尺码">
+  <data key="d7">1.0</data>
+  <data key="d8">裙子被用户指定需要大号。</data>
+  <data key="d9">属性关联,规格描述</data>
+  <data key="d10">chunk-17db1dff2645239b8b8534d9c4d9afde</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440503</data>
+  <data key="d13"></data>
+</edge>
+<edge source="DA123456" target="优惠券">
+  <data key="d7">1.0</data>
+  <data key="d8">因快递单号DA123456配送延误，向顾客补偿一张优惠券。</data>
+  <data key="d9">物流延误,补偿</data>
+  <data key="d10">chunk-9ccaceafe1ed63f81745889dbeef0edf</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440472</data>
+  <data key="d13"></data>
+</edge>
+<edge source="SF123456" target="快递公司">
+  <data key="d7">1.0</data>
+  <data key="d8">因快递单号SF123456显示签收但未收到，将联系快递公司进行核实。</data>
+  <data key="d9">异常核实,物流配送</data>
+  <data key="d10">chunk-9ccaceafe1ed63f81745889dbeef0edf</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440476</data>
+  <data key="d13"></data>
+</edge>
+<edge source="20240316005" target="退款">
+  <data key="d7">1.0</data>
+  <data key="d8">取消订单20240316005后，将启动退款流程。</data>
+  <data key="d9">订单取消,资金退回</data>
+  <data key="d10">chunk-9ccaceafe1ed63f81745889dbeef0edf</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440475</data>
+  <data key="d13"></data>
+</edge>
+<edge source="人工客服" target="机器人">
+  <data key="d7">1.0</data>
+  <data key="d8">当机器人无法解决如账号登录问题时，建议联系人工客服。</data>
+  <data key="d9">服务渠道,转接</data>
+  <data key="d10">chunk-62b4a8e0e10637ad68348fe8025c14f2</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440495</data>
+  <data key="d13"></data>
+</edge>
+<edge source="快递公司" target="投诉">
+  <data key="d7">1.0</data>
+  <data key="d8">快递公司在投诉业务中负责核实未收到却显示签收的异常情况</data>
+  <data key="d9">业务核实,物流服务</data>
+  <data key="d10">chunk-43d8ab5250d2ce1e04990d994334bdc6</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440538</data>
+  <data key="d13"></data>
+</edge>
+<edge source="13912345678" target="776655">
+  <data key="d7">1.0</data>
+  <data key="d8">手机号13912345678关联了订单号776655。</data>
+  <data key="d9">关联,查询</data>
+  <data key="d10">chunk-62b4a8e0e10637ad68348fe8025c14f2</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440477</data>
+  <data key="d13"></data>
+</edge>
+<edge source="776655" target="运输中">
+  <data key="d7">1.0</data>
+  <data key="d8">订单号776655的当前物流状态为运输中。</data>
+  <data key="d9">物流状态,订单状态</data>
+  <data key="d10">chunk-62b4a8e0e10637ad68348fe8025c14f2</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440484</data>
+  <data key="d13"></data>
+</edge>
+<edge source="YT5678" target="物流不更新">
+  <data key="d7">1.0</data>
+  <data key="d8">运单号YT5678因物流不更新被投诉。</data>
+  <data key="d9">投诉,物流状态</data>
+  <data key="d10">chunk-62b4a8e0e10637ad68348fe8025c14f2</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440479</data>
+  <data key="d13"></data>
+</edge>
+<edge source="JD98765" target="态度差">
+  <data key="d7">1.0</data>
+  <data key="d8">运单号JD98765因快递员态度差被投诉。</data>
+  <data key="d9">投诉,服务态度</data>
+  <data key="d10">chunk-62b4a8e0e10637ad68348fe8025c14f2</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440480</data>
+  <data key="d13"></data>
+</edge>
+<edge source="SH202406" target="派送中">
+  <data key="d7">1.0</data>
+  <data key="d8">订单号SH202406的当前状态为正在派送。</data>
+  <data key="d9">物流状态,预计送达</data>
+  <data key="d10">chunk-62b4a8e0e10637ad68348fe8025c14f2</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440486</data>
+  <data key="d13"></data>
+</edge>
+<edge source="111222" target="换货">
+  <data key="d7">1.0</data>
+  <data key="d8">订单号111222用于申请换同款其他颜色。</data>
+  <data key="d9">售后服务,订单操作</data>
+  <data key="d10">chunk-62b4a8e0e10637ad68348fe8025c14f2</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440481</data>
+  <data key="d13"></data>
+</edge>
+<edge source="A123" target="退货">
+  <data key="d7">1.0</data>
+  <data key="d8">订单号A123用于申请退货。</data>
+  <data key="d9">售后服务,订单操作</data>
+  <data key="d10">chunk-62b4a8e0e10637ad68348fe8025c14f2</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440481</data>
+  <data key="d13"></data>
+</edge>
+<edge source="上海" target="快递">
+  <data key="d7">1.0</data>
+  <data key="d8">用户查询从上海发出的快递包裹。</data>
+  <data key="d9">发货地,物流查询</data>
+  <data key="d10">chunk-62b4a8e0e10637ad68348fe8025c14f2</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440484</data>
+  <data key="d13"></data>
+</edge>
+<edge source="微信支付" target="注册手机号">
+  <data key="d7">1.0</data>
+  <data key="d8">仅有微信支付记录时，需提供注册手机号来查询订单。</data>
+  <data key="d9">信息验证,查询条件</data>
+  <data key="d10">chunk-62b4a8e0e10637ad68348fe8025c14f2</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440489</data>
+  <data key="d13"></data>
+</edge>
+<edge source="微信支付" target="订单号">
+  <data key="d7">1.0</data>
+  <data key="d8">客户在缺少订单号的情况下，试图通过微信支付记录来查询订单。</data>
+  <data key="d9">支付验证,替代查询</data>
+  <data key="d10">chunk-a920e7b36a1aea78046578f796206e63</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440507</data>
+  <data key="d13"></data>
+</edge>
+<edge source="微信支付" target="订单状态查询">
+  <data key="d7">1.0</data>
+  <data key="d8">客户尝试使用微信支付记录作为查询订单状态的替代依据。</data>
+  <data key="d9">支付验证,查询条件</data>
+  <data key="d10">chunk-a920e7b36a1aea78046578f796206e63</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440522</data>
+  <data key="d13"></data>
+</edge>
+<edge source="VIP会员" target="会员特权">
+  <data key="d7">1.0</data>
+  <data key="d8">VIP会员享有9折优惠、优先发货和专属客服等特权。</data>
+  <data key="d9">优惠政策,权益</data>
+  <data key="d10">chunk-62b4a8e0e10637ad68348fe8025c14f2</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440481</data>
+  <data key="d13"></data>
+</edge>
+<edge source="VIP会员" target="普通会员">
+  <data key="d7">1.0</data>
+  <data key="d8">普通会员消费满1000元后可升级为VIP会员。</data>
+  <data key="d9">会员升级,消费条件</data>
+  <data key="d10">chunk-62b4a8e0e10637ad68348fe8025c14f2</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440486</data>
+  <data key="d13"></data>
+</edge>
+<edge source="与图片不符" target="退换货">
+  <data key="d7">1.0</data>
+  <data key="d8">当商品与图片不符时，可办理退换货。</data>
+  <data key="d9">售后处理,问题解决</data>
+  <data key="d10">chunk-62b4a8e0e10637ad68348fe8025c14f2</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440486</data>
+  <data key="d13"></data>
+</edge>
+<edge source="换货" target="尺码">
+  <data key="d7">1.0</data>
+  <data key="d8">换货申请通常涉及更换合适的商品尺码。</data>
+  <data key="d9">业务关联,规格匹配</data>
+  <data key="d10">chunk-17db1dff2645239b8b8534d9c4d9afde</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440494</data>
+  <data key="d13"></data>
+</edge>
+<edge source="换货" target="889922">
+  <data key="d7">1.0</data>
+  <data key="d8">订单889922因尺码问题被申请换货。</data>
+  <data key="d9">业务关联,售后申请</data>
+  <data key="d10">chunk-17db1dff2645239b8b8534d9c4d9afde</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440499</data>
+  <data key="d13"></data>
+</edge>
+<edge source="换货" target="小慧">
+  <data key="d7">1.0</data>
+  <data key="d8">小慧负责协助用户办理换货登记和流程。</data>
+  <data key="d9">售后处理,客服服务</data>
+  <data key="d10">chunk-17db1dff2645239b8b8534d9c4d9afde</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440502</data>
+  <data key="d13"></data>
+</edge>
+<edge source="换货" target="订单A123">
+  <data key="d7">1.0</data>
+  <data key="d8">客户澄清针对订单A123的诉求不是换货，随后系统将其更正为退货。</data>
+  <data key="d9">售后澄清,操作更正</data>
+  <data key="d10">chunk-a920e7b36a1aea78046578f796206e63</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440515</data>
+  <data key="d13"></data>
+</edge>
+<edge source="退货" target="退货原因">
+  <data key="d7">1.0</data>
+  <data key="d8">退货申请必须提供具体的退货原因。</data>
+  <data key="d9">业务关联,因果</data>
+  <data key="d10">chunk-17db1dff2645239b8b8534d9c4d9afde</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440492</data>
+  <data key="d13"></data>
+</edge>
+<edge source="退货" target="小慧">
+  <data key="d7">1.0</data>
+  <data key="d8">小慧负责接收并处理用户的退货申请。</data>
+  <data key="d9">售后处理,客服服务</data>
+  <data key="d10">chunk-17db1dff2645239b8b8534d9c4d9afde</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440495</data>
+  <data key="d13"></data>
+</edge>
+<edge source="退货" target="20240315001">
+  <data key="d7">1.0</data>
+  <data key="d8">订单20240315001因质量问题被申请退货。</data>
+  <data key="d9">业务关联,售后申请</data>
+  <data key="d10">chunk-17db1dff2645239b8b8534d9c4d9afde</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440499</data>
+  <data key="d13"></data>
+</edge>
+<edge source="退货" target="质量问题">
+  <data key="d7">1.0</data>
+  <data key="d8">用户因商品存在质量问题而发起了退货申请。</data>
+  <data key="d9">业务关联,售后原因</data>
+  <data key="d10">chunk-17db1dff2645239b8b8534d9c4d9afde</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440506</data>
+  <data key="d13"></data>
+</edge>
+<edge source="退货" target="订单A123">
+  <data key="d7">1.0</data>
+  <data key="d8">客户针对订单A123发起了退货申请，系统将为其办理退货。</data>
+  <data key="d9">售后申请,订单处理</data>
+  <data key="d10">chunk-a920e7b36a1aea78046578f796206e63</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440511</data>
+  <data key="d13"></data>
+</edge>
+<edge source="订单号" target="取消订单">
+  <data key="d7">1.0</data>
+  <data key="d8">用户申请取消订单时需要提供订单号。</data>
+  <data key="d9">业务要求,信息确认</data>
+  <data key="d10">chunk-62b4a8e0e10637ad68348fe8025c14f2</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440488</data>
+  <data key="d13"></data>
+</edge>
+<edge source="订单号" target="注册手机号">
+  <data key="d7">1.0</data>
+  <data key="d8">系统提示在没有订单号时，可以使用注册手机号来查询订单。</data>
+  <data key="d9">替代查询,身份验证</data>
+  <data key="d10">chunk-a920e7b36a1aea78046578f796206e63</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440510</data>
+  <data key="d13"></data>
+</edge>
+<edge source="订单号" target="订单状态查询">
+  <data key="d7">1.0</data>
+  <data key="d8">查询订单状态通常需要提供订单号作为依据。</data>
+  <data key="d9">查询条件,订单追踪</data>
+  <data key="d10">chunk-a920e7b36a1aea78046578f796206e63</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440513</data>
+  <data key="d13"></data>
+</edge>
+<edge source="注册手机号" target="订单状态查询">
+  <data key="d7">1.0</data>
+  <data key="d8">系统支持使用注册手机号来查询订单状态。</data>
+  <data key="d9">查询条件,身份验证</data>
+  <data key="d10">chunk-a920e7b36a1aea78046578f796206e63</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440516</data>
+  <data key="d13"></data>
+</edge>
+<edge source="小慧" target="订单状态">
+  <data key="d7">1.0</data>
+  <data key="d8">小慧作为智能客服负责处理用户的订单状态查询请求。</data>
+  <data key="d9">客服服务,查询处理</data>
+  <data key="d10">chunk-17db1dff2645239b8b8534d9c4d9afde</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440491</data>
+  <data key="d13"></data>
+</edge>
+<edge source="小慧" target="物流查询">
+  <data key="d7">1.0</data>
+  <data key="d8">小慧协助用户通过运单号或手机号查询物流状态。</data>
+  <data key="d9">客服服务,查询处理</data>
+  <data key="d10">chunk-17db1dff2645239b8b8534d9c4d9afde</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440509</data>
+  <data key="d13"></data>
+</edge>
+<edge source="小慧" target="商品咨询">
+  <data key="d7">1.0</data>
+  <data key="d8">小慧回答用户关于商品库存、尺码和颜色的咨询。</data>
+  <data key="d9">信息咨询,客服服务</data>
+  <data key="d10">chunk-17db1dff2645239b8b8534d9c4d9afde</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440514</data>
+  <data key="d13"></data>
+</edge>
+<edge source="物流查询" target="138xxxx">
+  <data key="d7">1.0</data>
+  <data key="d8">手机号138xxxx被用作查询订单和物流的依据。</data>
+  <data key="d9">关联,查询方式</data>
+  <data key="d10">chunk-17db1dff2645239b8b8534d9c4d9afde</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440502</data>
+  <data key="d13"></data>
+</edge>
+<edge source="物流查询" target="SF998877">
+  <data key="d7">1.0</data>
+  <data key="d8">物流单号SF998877是物流查询的具体目标实例。</data>
+  <data key="d9">查询对象,物流状态</data>
+  <data key="d10">chunk-17db1dff2645239b8b8534d9c4d9afde</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440505</data>
+  <data key="d13"></data>
+</edge>
+<edge source="物流查询" target="订单776655">
+  <data key="d7">1.0</data>
+  <data key="d8">订单776655属于物流查询业务范畴，目前物流状态为运输中。</data>
+  <data key="d9">业务办理,运输状态</data>
+  <data key="d10">chunk-43d8ab5250d2ce1e04990d994334bdc6</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440524</data>
+  <data key="d13"></data>
+</edge>
+<edge source="商品咨询" target="保温杯">
+  <data key="d7">1.0</data>
+  <data key="d8">保温杯是用户进行商品是否有货咨询的具体对象。</data>
+  <data key="d9">咨询对象,库存查询</data>
+  <data key="d10">chunk-17db1dff2645239b8b8534d9c4d9afde</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440518</data>
+  <data key="d13"></data>
+</edge>
+<edge source="手机壳" target="20240315001">
+  <data key="d7">1.0</data>
+  <data key="d8">订单20240315001中购买的商品为手机壳。</data>
+  <data key="d9">包含关系,订单商品</data>
+  <data key="d10">chunk-17db1dff2645239b8b8534d9c4d9afde</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440495</data>
+  <data key="d13"></data>
+</edge>
+<edge source="20240315001" target="SF1234567890">
+  <data key="d7">1.0</data>
+  <data key="d8">订单20240315001发货时对应了物流单号SF1234567890。</data>
+  <data key="d9">物流关联,订单发货</data>
+  <data key="d10">chunk-17db1dff2645239b8b8534d9c4d9afde</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440505</data>
+  <data key="d13"></data>
+</edge>
+<edge source="SF998877" target="广州集散中心">
+  <data key="d7">1.0</data>
+  <data key="d8">运单号SF998877的包裹目前已到达广州集散中心。</data>
+  <data key="d9">地理位置,物流状态</data>
+  <data key="d10">chunk-17db1dff2645239b8b8534d9c4d9afde</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440509</data>
+  <data key="d13"></data>
+</edge>
+<edge source="投诉" target="质检部门">
+  <data key="d7">1.0</data>
+  <data key="d8">质检部门负责处理用户关于商品质量差的投诉反馈。</data>
+  <data key="d9">质量反馈,部门职责</data>
+  <data key="d10">chunk-43d8ab5250d2ce1e04990d994334bdc6</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440522</data>
+  <data key="d13"></data>
+</edge>
+<edge source="投诉" target="快递单号SF123456">
+  <data key="d7">1.0</data>
+  <data key="d8">快递单号SF123456是投诉业务中用于核实未收到情况的关键凭证</data>
+  <data key="d9">业务关联,物流凭证</data>
+  <data key="d10">chunk-43d8ab5250d2ce1e04990d994334bdc6</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440532</data>
+  <data key="d13"></data>
+</edge>
+<edge source="投诉" target="未收到但显示签收">
+  <data key="d7">1.0</data>
+  <data key="d8">未收到但显示签收是引发投诉业务的具体原因</data>
+  <data key="d9">投诉原因,问题描述</data>
+  <data key="d10">chunk-43d8ab5250d2ce1e04990d994334bdc6</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440535</data>
+  <data key="d13"></data>
+</edge>
+<edge source="退货订单" target="包">
+  <data key="d7">1.0</data>
+  <data key="d8">用户购买的包因不合适而申请退货，属于退货订单业务范畴。</data>
+  <data key="d9">商品不适,退货原因</data>
+  <data key="d10">chunk-43d8ab5250d2ce1e04990d994334bdc6</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440521</data>
+  <data key="d13"></data>
+</edge>
+<edge source="退货订单" target="退款未到">
+  <data key="d7">1.0</data>
+  <data key="d8">退款未到是引发退货订单业务查询的具体原因</data>
+  <data key="d9">退货原因,问题描述</data>
+  <data key="d10">chunk-43d8ab5250d2ce1e04990d994334bdc6</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440527</data>
+  <data key="d13"></data>
+</edge>
+<edge source="退货订单" target="不合适">
+  <data key="d7">1.0</data>
+  <data key="d8">不合适是用户对商品申请退货订单的原因</data>
+  <data key="d9">商品不适,退货原因</data>
+  <data key="d10">chunk-43d8ab5250d2ce1e04990d994334bdc6</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440530</data>
+  <data key="d13"></data>
+</edge>
+<edge source="退货订单" target="退货申请">
+  <data key="d7">1.0</data>
+  <data key="d8">退货申请是办理退货订单业务的具体操作方式</data>
+  <data key="d9">业务流程,操作方法</data>
+  <data key="d10">chunk-43d8ab5250d2ce1e04990d994334bdc6</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440536</data>
+  <data key="d13"></data>
+</edge>
+<edge source="换货订单" target="订单555666">
+  <data key="d7">1.0</data>
+  <data key="d8">订单555666属于换货订单业务范畴，申请更换其他款式。</data>
+  <data key="d9">业务办理,更换款式</data>
+  <data key="d10">chunk-43d8ab5250d2ce1e04990d994334bdc6</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440518</data>
+  <data key="d13"></data>
+</edge>
+<edge source="换货订单" target="黑色">
+  <data key="d7">1.0</data>
+  <data key="d8">黑色是用户在换货订单业务中指定更换的商品颜色</data>
+  <data key="d9">换货要求,颜色偏好</data>
+  <data key="d10">chunk-43d8ab5250d2ce1e04990d994334bdc6</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440526</data>
+  <data key="d13"></data>
+</edge>
+<edge source="修改地址" target="订单223344">
+  <data key="d7">1.0</data>
+  <data key="d8">订单223344属于修改地址业务范畴，申请变更收货地址。</data>
+  <data key="d9">业务办理,地址修改</data>
+  <data key="d10">chunk-43d8ab5250d2ce1e04990d994334bdc6</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440514</data>
+  <data key="d13"></data>
+</edge>
+<edge source="订单查询" target="订单1234">
+  <data key="d7">1.0</data>
+  <data key="d8">订单1234属于订单查询业务范畴，申请在发货时进行提醒。</data>
+  <data key="d9">业务办理,发货提醒</data>
+  <data key="d10">chunk-43d8ab5250d2ce1e04990d994334bdc6</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440516</data>
+  <data key="d13"></data>
+</edge>
+<edge source="订单查询" target="3月1号">
+  <data key="d7">1.0</data>
+  <data key="d8">3月1号是用户查询订单状况时限定的时间条件</data>
+  <data key="d9">时间限定,查询条件</data>
+  <data key="d10">chunk-43d8ab5250d2ce1e04990d994334bdc6</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440527</data>
+  <data key="d13"></data>
+</edge>
+<edge source="常见问题解答" target="实体店">
+  <data key="d7">1.0</data>
+  <data key="d8">关于实体店的咨询被归类为常见问题解答范畴。</data>
+  <data key="d9">业务解答,门店咨询</data>
+  <data key="d10">chunk-43d8ab5250d2ce1e04990d994334bdc6</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440522</data>
+  <data key="d13"></data>
+</edge>
+<edge source="常见问题解答" target="议价功能">
+  <data key="d7">1.0</data>
+  <data key="d8">关于议价功能的咨询被归类为常见问题解答范畴</data>
+  <data key="d9">业务解答,功能咨询</data>
+  <data key="d10">chunk-43d8ab5250d2ce1e04990d994334bdc6</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440529</data>
+  <data key="d13"></data>
+</edge>
+<edge source="常见问题解答" target="人工">
+  <data key="d7">1.0</data>
+  <data key="d8">回复人工可以转接人工客服，属于解答用户未知问题的方法</data>
+  <data key="d9">服务转接,沟通方式</data>
+  <data key="d10">chunk-43d8ab5250d2ce1e04990d994334bdc6</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440534</data>
+  <data key="d13"></data>
+</edge>
+<edge source="常见问题解答" target="优惠活动">
+  <data key="d7">1.0</data>
+  <data key="d8">引导用户关注优惠活动是解答议价需求的常见问题解答策略</data>
+  <data key="d9">业务解答,优惠信息</data>
+  <data key="d10">chunk-43d8ab5250d2ce1e04990d994334bdc6</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440537</data>
+  <data key="d13"></data>
+</edge>
+<edge source="订单223344" target="北京市朝阳区xxx">
+  <data key="d7">1.0</data>
+  <data key="d8">订单223344申请将收货地址变更至北京市朝阳区xxx。</data>
+  <data key="d9">地址变更,目标地点</data>
+  <data key="d10">chunk-43d8ab5250d2ce1e04990d994334bdc6</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440519</data>
+  <data key="d13"></data>
+</edge>
+<edge source="订单776655" target="手机号13912345678">
+  <data key="d7">1.0</data>
+  <data key="d8">通过手机号13912345678可以作为凭证查询到关联的订单776655。</data>
+  <data key="d9">信息关联,查询凭证</data>
+  <data key="d10">chunk-43d8ab5250d2ce1e04990d994334bdc6</data>
+  <data key="d11">D:\getsoftAI\rag\ai-ie-backend\app\services\rag\data\电商数据.md</data>
+  <data key="d12">1779440519</data>
+  <data key="d13"></data>
+</edge>
+</graph></graphml>

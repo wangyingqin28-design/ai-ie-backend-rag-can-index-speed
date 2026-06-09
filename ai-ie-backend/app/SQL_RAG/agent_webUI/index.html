@@ -1,0 +1,205 @@
+<!doctype html>
+<!-- 声明当前页面是 HTML5 文档，保证浏览器按标准模式渲染。 -->
+<html lang="zh-CN">
+<!-- 指定页面语言为中文，便于浏览器和辅助技术正确处理文本。 -->
+<head>
+  <!-- 定义文档元数据区域。 -->
+  <meta charset="utf-8" />
+  <!-- 使用 UTF-8，避免中文业务答案和实体名乱码。 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- 让界面在桌面和移动端都按设备宽度自适应。 -->
+  <title>SQL_RAG 智能客服业务脑</title>
+  <!-- 设置浏览器标签页标题。 -->
+  <link rel="stylesheet" href="./styles.css" />
+  <!-- 引入当前目录下的工作台样式文件。 -->
+</head>
+<!-- 结束文档头部。 -->
+<body>
+  <!-- 页面主体承载完整客服智能体工作台。 -->
+  <div class="app-shell">
+    <!-- 使用三栏工作台布局承载会话、聊天和运行状态。 -->
+    <aside class="sidebar" aria-label="会话列表">
+      <!-- 左侧栏用于会话入口和服务状态。 -->
+      <div class="brand-row">
+        <!-- 品牌区展示当前系统身份。 -->
+        <div class="brand-mark" aria-hidden="true">R</div>
+        <!-- 使用简洁字母标识 SQL_RAG 业务脑。 -->
+        <div>
+          <!-- 品牌文字容器。 -->
+          <div class="brand-title">SQL_RAG 业务脑</div>
+          <!-- 主标题说明当前前端连接的智能客服服务。 -->
+          <div class="brand-subtitle">LangGraph Agent Runtime</div>
+          <!-- 副标题说明当前后端主控架构。 -->
+        </div>
+        <!-- 结束品牌文字容器。 -->
+      </div>
+      <!-- 结束品牌区。 -->
+      <button class="new-chat-button" id="newChatButton" type="button">
+        <!-- 新建会话按钮清空当前页面消息并生成新 thread_id。 -->
+        <span aria-hidden="true">＋</span>
+        <!-- 使用加号图标表示新建。 -->
+        <span>新会话</span>
+        <!-- 按钮文字。 -->
+      </button>
+      <!-- 结束新建会话按钮。 -->
+      <div class="side-section">
+        <!-- 服务状态区域。 -->
+        <div class="section-title">服务状态</div>
+        <!-- 区域标题。 -->
+        <div class="status-list" id="statusList">
+          <!-- 前端会把 health 检查结果渲染到这里。 -->
+          <div class="status-row muted">正在检查...</div>
+          <!-- 初始状态提示。 -->
+        </div>
+        <!-- 结束状态列表。 -->
+      </div>
+      <!-- 结束服务状态区域。 -->
+      <div class="side-section">
+        <!-- 示例业务问题区域。 -->
+        <div class="section-title">业务场景</div>
+        <!-- 区域标题。 -->
+        <button class="prompt-chip" type="button" data-prompt="客户反馈订单一直没有审核，请先查知识库判断可能原因，再读取历史记忆和相关实体关系，最后创建一个跟进工单提醒业务人员处理。">订单审核跟进</button>
+        <!-- 常用测试问题。 -->
+        <button class="prompt-chip" type="button" data-prompt="客户说入仓单和预付款对不上，请查知识库、关系表和历史记忆后给出处理建议。">入仓预付核对</button>
+        <!-- 常用测试问题。 -->
+        <button class="prompt-chip" type="button" data-prompt="帮我检查这个客户最近有没有类似问题，并判断是否需要转人工处理。">历史问题复核</button>
+        <!-- 常用测试问题。 -->
+      </div>
+      <!-- 结束示例问题区域。 -->
+    </aside>
+    <!-- 结束左侧栏。 -->
+    <main class="chat-panel" aria-label="智能客服聊天框">
+      <!-- 中间主区域承载聊天消息。 -->
+      <header class="chat-header">
+        <!-- 聊天顶部栏显示当前会话和模型。 -->
+        <div>
+          <!-- 标题文字容器。 -->
+          <h1>智能客服 Agent</h1>
+          <!-- 当前应用主标题。 -->
+          <p>Qwen3.5-2B + Qdrant + SQL Server + LangGraph</p>
+          <!-- 当前业务脑运行链路。 -->
+        </div>
+        <!-- 结束标题文字容器。 -->
+        <div class="header-actions">
+          <!-- 顶部操作区。 -->
+          <span class="thread-pill" id="threadPill">thread: -</span>
+          <!-- 显示当前 LangGraph thread_id。 -->
+        </div>
+        <!-- 结束顶部操作区。 -->
+      </header>
+      <!-- 结束聊天顶部栏。 -->
+      <section class="messages" id="messages" aria-live="polite">
+        <!-- 聊天消息容器，aria-live 让辅助技术知道消息会更新。 -->
+        <article class="message assistant-message">
+          <!-- 初始助手消息。 -->
+          <div class="avatar assistant-avatar" aria-hidden="true">AI</div>
+          <!-- 助手头像。 -->
+          <div class="message-body">
+            <!-- 助手消息正文。 -->
+            <div class="message-meta">SQL_RAG 业务脑</div>
+            <!-- 消息来源。 -->
+            <div class="message-text">可以开始输入客户业务问题。</div>
+            <!-- 初始短句。 -->
+          </div>
+          <!-- 结束助手消息正文。 -->
+        </article>
+        <!-- 结束初始助手消息。 -->
+      </section>
+      <!-- 结束聊天消息容器。 -->
+      <form class="composer" id="composer">
+        <!-- 输入表单。 -->
+        <textarea id="questionInput" rows="2" placeholder="输入客户业务问题..." autocomplete="off"></textarea>
+        <!-- 多行输入框。 -->
+        <button class="send-button" id="sendButton" type="submit" aria-label="发送">
+          <!-- 发送按钮。 -->
+          <span aria-hidden="true">➜</span>
+          <!-- 使用箭头图标表示发送。 -->
+        </button>
+        <!-- 结束发送按钮。 -->
+      </form>
+      <!-- 结束输入表单。 -->
+    </main>
+    <!-- 结束中间聊天区域。 -->
+    <aside class="inspector" aria-label="业务脑运行面板">
+      <!-- 右侧栏展示业务脑工具链和本轮执行结果。 -->
+      <div class="inspector-section">
+        <!-- 工具链区域。 -->
+        <div class="section-title">Agent 链路</div>
+        <!-- 区域标题。 -->
+        <ol class="runtime-steps">
+          <!-- 固定展示截图要求的统一调用关系。 -->
+          <li>Planner / Intent Reasoner</li>
+          <!-- 规划和意图识别节点。 -->
+          <li>RAG Tool / LlamaIndex + Qdrant</li>
+          <!-- 知识库召回工具。 -->
+          <li>Graph Tool / SQL Server Relations</li>
+          <!-- 图谱关系扩展工具。 -->
+          <li>Memory Tool / Checkpoint + Profile</li>
+          <!-- 三层记忆读取工具。 -->
+          <li>Business Tool / Local Action Store</li>
+          <!-- 本地业务动作工具。 -->
+          <li>Verifier / Correction Flywheel</li>
+          <!-- 证据校验和纠错飞轮。 -->
+        </ol>
+        <!-- 结束工具链列表。 -->
+      </div>
+      <!-- 结束工具链区域。 -->
+      <div class="inspector-section">
+        <!-- 当前运行摘要区域。 -->
+        <div class="section-title">本轮摘要</div>
+        <!-- 区域标题。 -->
+        <div class="summary-grid" id="summaryGrid">
+          <!-- 前端会把本轮结果摘要渲染到这里。 -->
+          <div class="summary-empty">等待请求</div>
+          <!-- 初始空状态。 -->
+        </div>
+        <!-- 结束摘要网格。 -->
+      </div>
+      <!-- 结束运行摘要区域。 -->
+      <div class="inspector-section">
+        <!-- 工具清单区域。 -->
+        <div class="section-title">工具契约</div>
+        <!-- 区域标题。 -->
+        <div class="tool-list" id="toolList">
+          <!-- 前端会把后端工具 manifest 渲染到这里。 -->
+          <div class="summary-empty">正在读取...</div>
+          <!-- 初始状态。 -->
+        </div>
+        <!-- 结束工具清单。 -->
+      </div>
+      <!-- 结束工具契约区域。 -->
+    </aside>
+    <!-- 结束右侧栏。 -->
+  </div>
+  <!-- 结束工作台布局。 -->
+  <template id="assistantTemplate">
+    <!-- 助手消息模板。 -->
+    <article class="message assistant-message">
+      <!-- 助手消息外层。 -->
+      <div class="avatar assistant-avatar" aria-hidden="true">AI</div>
+      <!-- 助手头像。 -->
+      <div class="message-body">
+        <!-- 助手消息正文。 -->
+        <div class="message-meta">SQL_RAG 业务脑</div>
+        <!-- 消息来源。 -->
+        <details class="reasoning-box" open>
+          <!-- 公开解析过程，完成后由前端主动折叠。 -->
+          <summary>解析过程</summary>
+          <!-- 折叠标题。 -->
+          <pre class="reasoning-text"></pre>
+          <!-- 逐字吐露公开链路文本。 -->
+        </details>
+        <!-- 结束公开解析过程。 -->
+        <pre class="message-text answer-text"></pre>
+        <!-- 逐字吐露最终答案和执行结果。 -->
+      </div>
+      <!-- 结束助手消息正文。 -->
+    </article>
+    <!-- 结束助手消息外层。 -->
+  </template>
+  <!-- 结束助手消息模板。 -->
+  <script src="./app.js" defer></script>
+  <!-- 延迟加载前端业务逻辑脚本。 -->
+</body>
+<!-- 结束页面主体。 -->
+</html>

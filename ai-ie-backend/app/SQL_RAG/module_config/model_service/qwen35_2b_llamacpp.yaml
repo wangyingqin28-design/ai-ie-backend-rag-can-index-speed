@@ -1,0 +1,36 @@
+# SQL_RAG Qwen3.5-2B 本机验证模型服务配置。
+runtime:
+  backend: llamacpp
+  mode: portable_cpu
+model:
+  id: Qwen3.5-2B-Q4_K_M
+  family: Qwen3.5
+  size: 2B
+  quantization: Q4_K_M
+  gguf_repo: bartowski/Qwen_Qwen3.5-2B-GGUF
+  gguf_file: Qwen_Qwen3.5-2B-Q4_K_M.gguf
+  model_dir: D:/wkt/ai-ie-backend-feature-rag-new (1)/ai-ie-backend/app/SQL_RAG/module_config/model_service/models/qwen35_2b
+  model_path: D:/wkt/ai-ie-backend-feature-rag-new (1)/ai-ie-backend/app/SQL_RAG/module_config/model_service/models/qwen35_2b/Qwen_Qwen3.5-2B-Q4_K_M.gguf
+llamacpp:
+  release_api: https://api.github.com/repos/ggml-org/llama.cpp/releases/latest
+  asset_pattern: llama-.*-bin-win-cpu-x64\.zip
+  runtime_dir: D:/wkt/ai-ie-backend-feature-rag-new (1)/ai-ie-backend/app/SQL_RAG/module_config/model_service/runtimes/llama_cpp_win_cpu
+  server_exe: D:/wkt/ai-ie-backend-feature-rag-new (1)/ai-ie-backend/app/SQL_RAG/module_config/model_service/runtimes/llama_cpp_win_cpu/llama-server.exe
+server:
+  host: 127.0.0.1
+  port: 18000
+  openai_base_url: http://127.0.0.1:18000/v1
+  api_key: EMPTY
+generation:
+  context_size: 8192
+  threads: 6
+  gpu_layers: 0
+  temperature: 0.2
+  top_p: 0.8
+  predict: 1024
+agent_env:
+  QWEN_AGENT_MODEL: Qwen3.5-2B-Q4_K_M
+  QWEN_AGENT_MODEL_SERVER: http://127.0.0.1:18000/v1
+  QWEN_AGENT_API_KEY: EMPTY
+  QWEN_AGENT_MAX_TOKENS: 512
+  QWEN_AGENT_TEMPERATURE: 0.1

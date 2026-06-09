@@ -1,0 +1,23 @@
+{
+  "doc-3ac3a648b0f903f11785e3acdd485ac3": {
+    "status": "processed",
+    "chunks_count": 5,
+    "chunks_list": [
+      "chunk-17db1dff2645239b8b8534d9c4d9afde",
+      "chunk-9ccaceafe1ed63f81745889dbeef0edf",
+      "chunk-43d8ab5250d2ce1e04990d994334bdc6",
+      "chunk-62b4a8e0e10637ad68348fe8025c14f2",
+      "chunk-a920e7b36a1aea78046578f796206e63"
+    ],
+    "content_summary": "[\n  {\n    \"id\": 1,\n    \"text\": \"你好\",\n    \"intent\": \"greeting\",\n    \"entities\": [],\n    \"expected_answer\": \"您好，我是智能客服小慧，请问有什么可以帮您？\"\n  },\n  {\n    \"id\": 2,\n    \"text\": \"在吗\",\n    \"intent\": \"greeting\",\n    \"entities\": [],\n    \"expected_answer\": \"您好，我在的，有什...",
+    "content_length": 11613,
+    "created_at": "2026-05-22T08:53:25.564909+00:00",
+    "updated_at": "2026-05-22T09:02:21.222260+00:00",
+    "file_path": "D:\\getsoftAI\\rag\\ai-ie-backend\\app\\services\\rag\\data\\电商数据.md",
+    "track_id": "insert_20260522_165325_b463c374",
+    "metadata": {
+      "processing_start_time": 1779440005,
+      "processing_end_time": 1779440541
+    }
+  }
+}

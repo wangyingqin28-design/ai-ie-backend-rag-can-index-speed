@@ -1,0 +1,16 @@
+# SQL_RAG 智能客服业务脑安全和证据边界策略。
+evidence_policy:
+  require_retrieved_evidence_for_final_answer: true
+  forbid_fabricated_tool_result: true
+  low_confidence_action: transfer_human
+verifier:
+  threshold_env: AGENT_VERIFIER_THRESHOLD
+  default_threshold: 0.72
+business_action_policy:
+  inject_runtime_user_context: true
+  allow_model_to_choose_action: true
+  require_sqlserver_audit_event: true
+human_handoff:
+  create_queue_record_on_low_confidence: true
+  record_failure_branch: true
+

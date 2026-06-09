@@ -1,0 +1,24 @@
+# SQL_RAG 智能客服业务脑观测和纠错飞轮配置。
+mark_fields:
+  - intent_node
+  - retrieval_query
+  - retrieved_chunk_ids
+  - global_cluster_ids
+  - kg_entities
+  - kg_edges
+  - tool_name
+  - tool_args
+  - tool_result_status
+  - memory_read_ids
+  - memory_write_event
+  - verifier_score
+  - answer_source_chunk_ids
+  - final_action
+  - failure_reason
+local_flywheel:
+  sqlserver_table: dbo.rag_agent_correction_samples
+langsmith:
+  enabled_by_env: LANGSMITH_API_KEY
+phoenix:
+  endpoint_env: PHOENIX_COLLECTOR_ENDPOINT
+

@@ -1,0 +1,862 @@
+{
+  "顾客": {
+    "chunk_ids": [
+      "chunk-9ccaceafe1ed63f81745889dbeef0edf"
+    ],
+    "count": 1,
+    "create_time": 1779440384,
+    "update_time": 1779440384,
+    "_id": "顾客"
+  },
+  "裙子": {
+    "chunk_ids": [
+      "chunk-9ccaceafe1ed63f81745889dbeef0edf",
+      "chunk-17db1dff2645239b8b8534d9c4d9afde"
+    ],
+    "count": 2,
+    "create_time": 1779440384,
+    "update_time": 1779440384,
+    "_id": "裙子"
+  },
+  "运动鞋": {
+    "chunk_ids": [
+      "chunk-9ccaceafe1ed63f81745889dbeef0edf"
+    ],
+    "count": 1,
+    "create_time": 1779440384,
+    "update_time": 1779440384,
+    "_id": "运动鞋"
+  },
+  "DA123456": {
+    "chunk_ids": [
+      "chunk-9ccaceafe1ed63f81745889dbeef0edf"
+    ],
+    "count": 1,
+    "create_time": 1779440384,
+    "update_time": 1779440384,
+    "_id": "DA123456"
+  },
+  "SF123456": {
+    "chunk_ids": [
+      "chunk-9ccaceafe1ed63f81745889dbeef0edf"
+    ],
+    "count": 1,
+    "create_time": 1779440384,
+    "update_time": 1779440384,
+    "_id": "SF123456"
+  },
+  "20240316005": {
+    "chunk_ids": [
+      "chunk-9ccaceafe1ed63f81745889dbeef0edf"
+    ],
+    "count": 1,
+    "create_time": 1779440385,
+    "update_time": 1779440385,
+    "_id": "20240316005"
+  },
+  "99876": {
+    "chunk_ids": [
+      "chunk-9ccaceafe1ed63f81745889dbeef0edf"
+    ],
+    "count": 1,
+    "create_time": 1779440386,
+    "update_time": 1779440386,
+    "_id": "99876"
+  },
+  "商品损坏": {
+    "chunk_ids": [
+      "chunk-9ccaceafe1ed63f81745889dbeef0edf"
+    ],
+    "count": 1,
+    "create_time": 1779440386,
+    "update_time": 1779440386,
+    "_id": "商品损坏"
+  },
+  "配送延误": {
+    "chunk_ids": [
+      "chunk-9ccaceafe1ed63f81745889dbeef0edf"
+    ],
+    "count": 1,
+    "create_time": 1779440390,
+    "update_time": 1779440390,
+    "_id": "配送延误"
+  },
+  "虚假签收": {
+    "chunk_ids": [
+      "chunk-9ccaceafe1ed63f81745889dbeef0edf"
+    ],
+    "count": 1,
+    "create_time": 1779440391,
+    "update_time": 1779440391,
+    "_id": "虚假签收"
+  },
+  "营业时间": {
+    "chunk_ids": [
+      "chunk-9ccaceafe1ed63f81745889dbeef0edf"
+    ],
+    "count": 1,
+    "create_time": 1779440391,
+    "update_time": 1779440391,
+    "_id": "营业时间"
+  },
+  "退货政策": {
+    "chunk_ids": [
+      "chunk-9ccaceafe1ed63f81745889dbeef0edf"
+    ],
+    "count": 1,
+    "create_time": 1779440392,
+    "update_time": 1779440392,
+    "_id": "退货政策"
+  },
+  "电子发票": {
+    "chunk_ids": [
+      "chunk-9ccaceafe1ed63f81745889dbeef0edf"
+    ],
+    "count": 1,
+    "create_time": 1779440392,
+    "update_time": 1779440392,
+    "_id": "电子发票"
+  },
+  "蓝色": {
+    "chunk_ids": [
+      "chunk-9ccaceafe1ed63f81745889dbeef0edf"
+    ],
+    "count": 1,
+    "create_time": 1779440392,
+    "update_time": 1779440392,
+    "_id": "蓝色"
+  },
+  "大号": {
+    "chunk_ids": [
+      "chunk-9ccaceafe1ed63f81745889dbeef0edf"
+    ],
+    "count": 1,
+    "create_time": 1779440392,
+    "update_time": 1779440392,
+    "_id": "大号"
+  },
+  "人工客服": {
+    "chunk_ids": [
+      "chunk-9ccaceafe1ed63f81745889dbeef0edf",
+      "chunk-62b4a8e0e10637ad68348fe8025c14f2"
+    ],
+    "count": 2,
+    "create_time": 1779440392,
+    "update_time": 1779440392,
+    "_id": "人工客服"
+  },
+  "优惠券": {
+    "chunk_ids": [
+      "chunk-9ccaceafe1ed63f81745889dbeef0edf",
+      "chunk-62b4a8e0e10637ad68348fe8025c14f2"
+    ],
+    "count": 2,
+    "create_time": 1779440396,
+    "update_time": 1779440396,
+    "_id": "优惠券"
+  },
+  "退款": {
+    "chunk_ids": [
+      "chunk-9ccaceafe1ed63f81745889dbeef0edf"
+    ],
+    "count": 1,
+    "create_time": 1779440396,
+    "update_time": 1779440396,
+    "_id": "退款"
+  },
+  "快递公司": {
+    "chunk_ids": [
+      "chunk-9ccaceafe1ed63f81745889dbeef0edf",
+      "chunk-43d8ab5250d2ce1e04990d994334bdc6"
+    ],
+    "count": 2,
+    "create_time": 1779440397,
+    "update_time": 1779440397,
+    "_id": "快递公司"
+  },
+  "13912345678": {
+    "chunk_ids": [
+      "chunk-62b4a8e0e10637ad68348fe8025c14f2"
+    ],
+    "count": 1,
+    "create_time": 1779440398,
+    "update_time": 1779440398,
+    "_id": "13912345678"
+  },
+  "776655": {
+    "chunk_ids": [
+      "chunk-62b4a8e0e10637ad68348fe8025c14f2"
+    ],
+    "count": 1,
+    "create_time": 1779440399,
+    "update_time": 1779440399,
+    "_id": "776655"
+  },
+  "YT5678": {
+    "chunk_ids": [
+      "chunk-62b4a8e0e10637ad68348fe8025c14f2"
+    ],
+    "count": 1,
+    "create_time": 1779440399,
+    "update_time": 1779440399,
+    "_id": "YT5678"
+  },
+  "JD98765": {
+    "chunk_ids": [
+      "chunk-62b4a8e0e10637ad68348fe8025c14f2"
+    ],
+    "count": 1,
+    "create_time": 1779440399,
+    "update_time": 1779440399,
+    "_id": "JD98765"
+  },
+  "SH202406": {
+    "chunk_ids": [
+      "chunk-62b4a8e0e10637ad68348fe8025c14f2"
+    ],
+    "count": 1,
+    "create_time": 1779440399,
+    "update_time": 1779440399,
+    "_id": "SH202406"
+  },
+  "111222": {
+    "chunk_ids": [
+      "chunk-62b4a8e0e10637ad68348fe8025c14f2"
+    ],
+    "count": 1,
+    "create_time": 1779440402,
+    "update_time": 1779440402,
+    "_id": "111222"
+  },
+  "A123": {
+    "chunk_ids": [
+      "chunk-62b4a8e0e10637ad68348fe8025c14f2"
+    ],
+    "count": 1,
+    "create_time": 1779440402,
+    "update_time": 1779440402,
+    "_id": "A123"
+  },
+  "上海": {
+    "chunk_ids": [
+      "chunk-62b4a8e0e10637ad68348fe8025c14f2"
+    ],
+    "count": 1,
+    "create_time": 1779440403,
+    "update_time": 1779440403,
+    "_id": "上海"
+  },
+  "微信支付": {
+    "chunk_ids": [
+      "chunk-62b4a8e0e10637ad68348fe8025c14f2",
+      "chunk-a920e7b36a1aea78046578f796206e63"
+    ],
+    "count": 2,
+    "create_time": 1779440404,
+    "update_time": 1779440404,
+    "_id": "微信支付"
+  },
+  "VIP会员": {
+    "chunk_ids": [
+      "chunk-62b4a8e0e10637ad68348fe8025c14f2"
+    ],
+    "count": 1,
+    "create_time": 1779440404,
+    "update_time": 1779440404,
+    "_id": "VIP会员"
+  },
+  "快递员": {
+    "chunk_ids": [
+      "chunk-62b4a8e0e10637ad68348fe8025c14f2"
+    ],
+    "count": 1,
+    "create_time": 1779440404,
+    "update_time": 1779440404,
+    "_id": "快递员"
+  },
+  "物流不更新": {
+    "chunk_ids": [
+      "chunk-62b4a8e0e10637ad68348fe8025c14f2"
+    ],
+    "count": 1,
+    "create_time": 1779440404,
+    "update_time": 1779440404,
+    "_id": "物流不更新"
+  },
+  "态度差": {
+    "chunk_ids": [
+      "chunk-62b4a8e0e10637ad68348fe8025c14f2"
+    ],
+    "count": 1,
+    "create_time": 1779440404,
+    "update_time": 1779440404,
+    "_id": "态度差"
+  },
+  "与图片不符": {
+    "chunk_ids": [
+      "chunk-62b4a8e0e10637ad68348fe8025c14f2"
+    ],
+    "count": 1,
+    "create_time": 1779440407,
+    "update_time": 1779440407,
+    "_id": "与图片不符"
+  },
+  "会员特权": {
+    "chunk_ids": [
+      "chunk-62b4a8e0e10637ad68348fe8025c14f2"
+    ],
+    "count": 1,
+    "create_time": 1779440407,
+    "update_time": 1779440407,
+    "_id": "会员特权"
+  },
+  "换货": {
+    "chunk_ids": [
+      "chunk-62b4a8e0e10637ad68348fe8025c14f2",
+      "chunk-17db1dff2645239b8b8534d9c4d9afde",
+      "chunk-a920e7b36a1aea78046578f796206e63"
+    ],
+    "count": 3,
+    "create_time": 1779440408,
+    "update_time": 1779440408,
+    "_id": "换货"
+  },
+  "退货": {
+    "chunk_ids": [
+      "chunk-62b4a8e0e10637ad68348fe8025c14f2",
+      "chunk-17db1dff2645239b8b8534d9c4d9afde",
+      "chunk-a920e7b36a1aea78046578f796206e63"
+    ],
+    "count": 3,
+    "create_time": 1779440408,
+    "update_time": 1779440408,
+    "_id": "退货"
+  },
+  "快递": {
+    "chunk_ids": [
+      "chunk-62b4a8e0e10637ad68348fe8025c14f2"
+    ],
+    "count": 1,
+    "create_time": 1779440410,
+    "update_time": 1779440410,
+    "_id": "快递"
+  },
+  "订单号": {
+    "chunk_ids": [
+      "chunk-62b4a8e0e10637ad68348fe8025c14f2",
+      "chunk-17db1dff2645239b8b8534d9c4d9afde",
+      "chunk-a920e7b36a1aea78046578f796206e63"
+    ],
+    "count": 3,
+    "create_time": 1779440411,
+    "update_time": 1779440411,
+    "_id": "订单号"
+  },
+  "普通会员": {
+    "chunk_ids": [
+      "chunk-62b4a8e0e10637ad68348fe8025c14f2"
+    ],
+    "count": 1,
+    "create_time": 1779440411,
+    "update_time": 1779440411,
+    "_id": "普通会员"
+  },
+  "取消订单": {
+    "chunk_ids": [
+      "chunk-62b4a8e0e10637ad68348fe8025c14f2"
+    ],
+    "count": 1,
+    "create_time": 1779440411,
+    "update_time": 1779440411,
+    "_id": "取消订单"
+  },
+  "退换货": {
+    "chunk_ids": [
+      "chunk-62b4a8e0e10637ad68348fe8025c14f2"
+    ],
+    "count": 1,
+    "create_time": 1779440411,
+    "update_time": 1779440411,
+    "_id": "退换货"
+  },
+  "忘记密码": {
+    "chunk_ids": [
+      "chunk-62b4a8e0e10637ad68348fe8025c14f2"
+    ],
+    "count": 1,
+    "create_time": 1779440413,
+    "update_time": 1779440413,
+    "_id": "忘记密码"
+  },
+  "注册手机号": {
+    "chunk_ids": [
+      "chunk-62b4a8e0e10637ad68348fe8025c14f2",
+      "chunk-a920e7b36a1aea78046578f796206e63"
+    ],
+    "count": 2,
+    "create_time": 1779440413,
+    "update_time": 1779440413,
+    "_id": "注册手机号"
+  },
+  "机器人": {
+    "chunk_ids": [
+      "chunk-62b4a8e0e10637ad68348fe8025c14f2"
+    ],
+    "count": 1,
+    "create_time": 1779440414,
+    "update_time": 1779440414,
+    "_id": "机器人"
+  },
+  "运输中": {
+    "chunk_ids": [
+      "chunk-62b4a8e0e10637ad68348fe8025c14f2"
+    ],
+    "count": 1,
+    "create_time": 1779440415,
+    "update_time": 1779440415,
+    "_id": "运输中"
+  },
+  "派送中": {
+    "chunk_ids": [
+      "chunk-62b4a8e0e10637ad68348fe8025c14f2"
+    ],
+    "count": 1,
+    "create_time": 1779440416,
+    "update_time": 1779440416,
+    "_id": "派送中"
+  },
+  "满200减20": {
+    "chunk_ids": [
+      "chunk-62b4a8e0e10637ad68348fe8025c14f2"
+    ],
+    "count": 1,
+    "create_time": 1779440416,
+    "update_time": 1779440416,
+    "_id": "满200减20"
+  },
+  "账号登录不上": {
+    "chunk_ids": [
+      "chunk-62b4a8e0e10637ad68348fe8025c14f2"
+    ],
+    "count": 1,
+    "create_time": 1779440416,
+    "update_time": 1779440416,
+    "_id": "账号登录不上"
+  },
+  "小慧": {
+    "chunk_ids": [
+      "chunk-17db1dff2645239b8b8534d9c4d9afde"
+    ],
+    "count": 1,
+    "create_time": 1779440418,
+    "update_time": 1779440418,
+    "_id": "小慧"
+  },
+  "订单状态": {
+    "chunk_ids": [
+      "chunk-17db1dff2645239b8b8534d9c4d9afde"
+    ],
+    "count": 1,
+    "create_time": 1779440418,
+    "update_time": 1779440418,
+    "_id": "订单状态"
+  },
+  "物流查询": {
+    "chunk_ids": [
+      "chunk-17db1dff2645239b8b8534d9c4d9afde",
+      "chunk-43d8ab5250d2ce1e04990d994334bdc6"
+    ],
+    "count": 2,
+    "create_time": 1779440418,
+    "update_time": 1779440418,
+    "_id": "物流查询"
+  },
+  "商品咨询": {
+    "chunk_ids": [
+      "chunk-17db1dff2645239b8b8534d9c4d9afde"
+    ],
+    "count": 1,
+    "create_time": 1779440420,
+    "update_time": 1779440420,
+    "_id": "商品咨询"
+  },
+  "物流单号": {
+    "chunk_ids": [
+      "chunk-17db1dff2645239b8b8534d9c4d9afde"
+    ],
+    "count": 1,
+    "create_time": 1779440421,
+    "update_time": 1779440421,
+    "_id": "物流单号"
+  },
+  "手机号": {
+    "chunk_ids": [
+      "chunk-17db1dff2645239b8b8534d9c4d9afde"
+    ],
+    "count": 1,
+    "create_time": 1779440422,
+    "update_time": 1779440422,
+    "_id": "手机号"
+  },
+  "退货原因": {
+    "chunk_ids": [
+      "chunk-17db1dff2645239b8b8534d9c4d9afde"
+    ],
+    "count": 1,
+    "create_time": 1779440422,
+    "update_time": 1779440422,
+    "_id": "退货原因"
+  },
+  "尺码": {
+    "chunk_ids": [
+      "chunk-17db1dff2645239b8b8534d9c4d9afde"
+    ],
+    "count": 1,
+    "create_time": 1779440422,
+    "update_time": 1779440422,
+    "_id": "尺码"
+  },
+  "颜色": {
+    "chunk_ids": [
+      "chunk-17db1dff2645239b8b8534d9c4d9afde"
+    ],
+    "count": 1,
+    "create_time": 1779440424,
+    "update_time": 1779440424,
+    "_id": "颜色"
+  },
+  "手机壳": {
+    "chunk_ids": [
+      "chunk-17db1dff2645239b8b8534d9c4d9afde"
+    ],
+    "count": 1,
+    "create_time": 1779440424,
+    "update_time": 1779440424,
+    "_id": "手机壳"
+  },
+  "衬衫": {
+    "chunk_ids": [
+      "chunk-17db1dff2645239b8b8534d9c4d9afde"
+    ],
+    "count": 1,
+    "create_time": 1779440424,
+    "update_time": 1779440424,
+    "_id": "衬衫"
+  },
+  "保温杯": {
+    "chunk_ids": [
+      "chunk-17db1dff2645239b8b8534d9c4d9afde"
+    ],
+    "count": 1,
+    "create_time": 1779440426,
+    "update_time": 1779440426,
+    "_id": "保温杯"
+  },
+  "20240315001": {
+    "chunk_ids": [
+      "chunk-17db1dff2645239b8b8534d9c4d9afde"
+    ],
+    "count": 1,
+    "create_time": 1779440426,
+    "update_time": 1779440426,
+    "_id": "20240315001"
+  },
+  "889922": {
+    "chunk_ids": [
+      "chunk-17db1dff2645239b8b8534d9c4d9afde"
+    ],
+    "count": 1,
+    "create_time": 1779440428,
+    "update_time": 1779440428,
+    "_id": "889922"
+  },
+  "SF998877": {
+    "chunk_ids": [
+      "chunk-17db1dff2645239b8b8534d9c4d9afde"
+    ],
+    "count": 1,
+    "create_time": 1779440428,
+    "update_time": 1779440428,
+    "_id": "SF998877"
+  },
+  "138xxxx": {
+    "chunk_ids": [
+      "chunk-17db1dff2645239b8b8534d9c4d9afde"
+    ],
+    "count": 1,
+    "create_time": 1779440428,
+    "update_time": 1779440428,
+    "_id": "138xxxx"
+  },
+  "广州集散中心": {
+    "chunk_ids": [
+      "chunk-17db1dff2645239b8b8534d9c4d9afde"
+    ],
+    "count": 1,
+    "create_time": 1779440430,
+    "update_time": 1779440430,
+    "_id": "广州集散中心"
+  },
+  "SF1234567890": {
+    "chunk_ids": [
+      "chunk-17db1dff2645239b8b8534d9c4d9afde"
+    ],
+    "count": 1,
+    "create_time": 1779440430,
+    "update_time": 1779440430,
+    "_id": "SF1234567890"
+  },
+  "质量问题": {
+    "chunk_ids": [
+      "chunk-17db1dff2645239b8b8534d9c4d9afde"
+    ],
+    "count": 1,
+    "create_time": 1779440430,
+    "update_time": 1779440430,
+    "_id": "质量问题"
+  },
+  "投诉": {
+    "chunk_ids": [
+      "chunk-17db1dff2645239b8b8534d9c4d9afde",
+      "chunk-43d8ab5250d2ce1e04990d994334bdc6"
+    ],
+    "count": 2,
+    "create_time": 1779440430,
+    "update_time": 1779440430,
+    "_id": "投诉"
+  },
+  "订单A123": {
+    "chunk_ids": [
+      "chunk-a920e7b36a1aea78046578f796206e63"
+    ],
+    "count": 1,
+    "create_time": 1779440432,
+    "update_time": 1779440432,
+    "_id": "订单A123"
+  },
+  "订单状态查询": {
+    "chunk_ids": [
+      "chunk-a920e7b36a1aea78046578f796206e63"
+    ],
+    "count": 1,
+    "create_time": 1779440432,
+    "update_time": 1779440432,
+    "_id": "订单状态查询"
+  },
+  "退货订单": {
+    "chunk_ids": [
+      "chunk-43d8ab5250d2ce1e04990d994334bdc6"
+    ],
+    "count": 1,
+    "create_time": 1779440433,
+    "update_time": 1779440433,
+    "_id": "退货订单"
+  },
+  "换货订单": {
+    "chunk_ids": [
+      "chunk-43d8ab5250d2ce1e04990d994334bdc6"
+    ],
+    "count": 1,
+    "create_time": 1779440434,
+    "update_time": 1779440434,
+    "_id": "换货订单"
+  },
+  "修改地址": {
+    "chunk_ids": [
+      "chunk-43d8ab5250d2ce1e04990d994334bdc6"
+    ],
+    "count": 1,
+    "create_time": 1779440435,
+    "update_time": 1779440435,
+    "_id": "修改地址"
+  },
+  "订单查询": {
+    "chunk_ids": [
+      "chunk-43d8ab5250d2ce1e04990d994334bdc6"
+    ],
+    "count": 1,
+    "create_time": 1779440435,
+    "update_time": 1779440435,
+    "_id": "订单查询"
+  },
+  "常见问题解答": {
+    "chunk_ids": [
+      "chunk-43d8ab5250d2ce1e04990d994334bdc6"
+    ],
+    "count": 1,
+    "create_time": 1779440435,
+    "update_time": 1779440435,
+    "_id": "常见问题解答"
+  },
+  "订单223344": {
+    "chunk_ids": [
+      "chunk-43d8ab5250d2ce1e04990d994334bdc6"
+    ],
+    "count": 1,
+    "create_time": 1779440435,
+    "update_time": 1779440435,
+    "_id": "订单223344"
+  },
+  "订单1234": {
+    "chunk_ids": [
+      "chunk-43d8ab5250d2ce1e04990d994334bdc6"
+    ],
+    "count": 1,
+    "create_time": 1779440437,
+    "update_time": 1779440437,
+    "_id": "订单1234"
+  },
+  "订单555666": {
+    "chunk_ids": [
+      "chunk-43d8ab5250d2ce1e04990d994334bdc6"
+    ],
+    "count": 1,
+    "create_time": 1779440437,
+    "update_time": 1779440437,
+    "_id": "订单555666"
+  },
+  "订单776655": {
+    "chunk_ids": [
+      "chunk-43d8ab5250d2ce1e04990d994334bdc6"
+    ],
+    "count": 1,
+    "create_time": 1779440439,
+    "update_time": 1779440439,
+    "_id": "订单776655"
+  },
+  "北京市朝阳区xxx": {
+    "chunk_ids": [
+      "chunk-43d8ab5250d2ce1e04990d994334bdc6"
+    ],
+    "count": 1,
+    "create_time": 1779440440,
+    "update_time": 1779440440,
+    "_id": "北京市朝阳区xxx"
+  },
+  "手机号13912345678": {
+    "chunk_ids": [
+      "chunk-43d8ab5250d2ce1e04990d994334bdc6"
+    ],
+    "count": 1,
+    "create_time": 1779440440,
+    "update_time": 1779440440,
+    "_id": "手机号13912345678"
+  },
+  "包": {
+    "chunk_ids": [
+      "chunk-43d8ab5250d2ce1e04990d994334bdc6"
+    ],
+    "count": 1,
+    "create_time": 1779440440,
+    "update_time": 1779440440,
+    "_id": "包"
+  },
+  "质检部门": {
+    "chunk_ids": [
+      "chunk-43d8ab5250d2ce1e04990d994334bdc6"
+    ],
+    "count": 1,
+    "create_time": 1779440440,
+    "update_time": 1779440440,
+    "_id": "质检部门"
+  },
+  "实体店": {
+    "chunk_ids": [
+      "chunk-43d8ab5250d2ce1e04990d994334bdc6"
+    ],
+    "count": 1,
+    "create_time": 1779440442,
+    "update_time": 1779440442,
+    "_id": "实体店"
+  },
+  "快递单号SF123456": {
+    "chunk_ids": [
+      "chunk-43d8ab5250d2ce1e04990d994334bdc6"
+    ],
+    "count": 1,
+    "create_time": 1779440442,
+    "update_time": 1779440442,
+    "_id": "快递单号SF123456"
+  },
+  "未收到但显示签收": {
+    "chunk_ids": [
+      "chunk-43d8ab5250d2ce1e04990d994334bdc6"
+    ],
+    "count": 1,
+    "create_time": 1779440444,
+    "update_time": 1779440444,
+    "_id": "未收到但显示签收"
+  },
+  "退款未到": {
+    "chunk_ids": [
+      "chunk-43d8ab5250d2ce1e04990d994334bdc6"
+    ],
+    "count": 1,
+    "create_time": 1779440444,
+    "update_time": 1779440444,
+    "_id": "退款未到"
+  },
+  "黑色": {
+    "chunk_ids": [
+      "chunk-43d8ab5250d2ce1e04990d994334bdc6"
+    ],
+    "count": 1,
+    "create_time": 1779440445,
+    "update_time": 1779440445,
+    "_id": "黑色"
+  },
+  "3月1号": {
+    "chunk_ids": [
+      "chunk-43d8ab5250d2ce1e04990d994334bdc6"
+    ],
+    "count": 1,
+    "create_time": 1779440446,
+    "update_time": 1779440446,
+    "_id": "3月1号"
+  },
+  "不合适": {
+    "chunk_ids": [
+      "chunk-43d8ab5250d2ce1e04990d994334bdc6"
+    ],
+    "count": 1,
+    "create_time": 1779440446,
+    "update_time": 1779440446,
+    "_id": "不合适"
+  },
+  "议价功能": {
+    "chunk_ids": [
+      "chunk-43d8ab5250d2ce1e04990d994334bdc6"
+    ],
+    "count": 1,
+    "create_time": 1779440446,
+    "update_time": 1779440446,
+    "_id": "议价功能"
+  },
+  "人工": {
+    "chunk_ids": [
+      "chunk-43d8ab5250d2ce1e04990d994334bdc6"
+    ],
+    "count": 1,
+    "create_time": 1779440446,
+    "update_time": 1779440446,
+    "_id": "人工"
+  },
+  "退货申请": {
+    "chunk_ids": [
+      "chunk-43d8ab5250d2ce1e04990d994334bdc6"
+    ],
+    "count": 1,
+    "create_time": 1779440446,
+    "update_time": 1779440446,
+    "_id": "退货申请"
+  },
+  "优惠活动": {
+    "chunk_ids": [
+      "chunk-43d8ab5250d2ce1e04990d994334bdc6"
+    ],
+    "count": 1,
+    "create_time": 1779440449,
+    "update_time": 1779440449,
+    "_id": "优惠活动"
+  }
+}

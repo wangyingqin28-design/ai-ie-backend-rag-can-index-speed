@@ -1,0 +1,24 @@
+# SQL_RAG Qwen3.5-35B-A3B-FP8 vLLM 部署标准配置。
+runtime:
+  backend: vllm
+model:
+  id: Qwen/Qwen3.5-35B-A3B-FP8
+  source: modelscope
+  local_dir: D:/models/Qwen3.5-35B-A3B-FP8
+server:
+  host: 0.0.0.0
+  port: 8000
+  openai_base_url: http://127.0.0.1:8000/v1
+  api_key: EMPTY
+vllm:
+  max_model_len: 65536
+  tensor_parallel_size: 1
+  reasoning_parser: qwen3
+  tool_call_parser: qwen3_coder
+  language_model_only: true
+  gpu_memory_utilization: 0.90
+deployment_notes:
+  min_trial_gpu_vram_gb: 48
+  recommended_gpu_vram_gb: 80
+  production_first_context: 65536
+

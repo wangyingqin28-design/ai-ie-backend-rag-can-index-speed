@@ -1,0 +1,848 @@
+/* 定义全局盒模型，保证固定宽度和间距计算稳定。 */
+* {
+  /* 让 padding 和 border 纳入元素尺寸。 */
+  box-sizing: border-box;
+}
+
+/* 定义页面级颜色、字体和布局基础。 */
+:root {
+  /* 主背景使用中性浅灰，降低长时间客服工作疲劳。 */
+  --bg: #eef1f4;
+  /* 面板背景使用接近白色的冷灰。 */
+  --panel: #f8fafb;
+  /* 次级面板背景用于输入区和侧栏。 */
+  --panel-soft: #ffffff;
+  /* 主文字颜色。 */
+  --text: #17202a;
+  /* 次级文字颜色。 */
+  --muted: #65727f;
+  /* 边框颜色。 */
+  --border: #d9e0e6;
+  /* 主强调色使用偏青绿色，贴合数据和业务系统。 */
+  --accent: #16827a;
+  /* 强调色浅底。 */
+  --accent-soft: #e5f5f2;
+  /* 警示/执行色用于业务动作。 */
+  --amber: #b87918;
+  /* 错误色。 */
+  --danger: #b83a4b;
+  /* 阴影使用低透明度。 */
+  --shadow: 0 12px 30px rgba(26, 37, 48, 0.08);
+  /* 统一圆角，不超过 8px。 */
+  --radius: 8px;
+  /* 默认字体栈。 */
+  font-family: "Microsoft YaHei", "PingFang SC", "Segoe UI", Arial, sans-serif;
+}
+
+/* 设置根节点高度。 */
+html,
+body {
+  /* 占满视口高度。 */
+  height: 100%;
+}
+
+/* 设置页面主体。 */
+body {
+  /* 清除浏览器默认外边距。 */
+  margin: 0;
+  /* 使用全局背景色。 */
+  background: var(--bg);
+  /* 使用主文字颜色。 */
+  color: var(--text);
+  /* 禁止横向滚动。 */
+  overflow: hidden;
+}
+
+/* 三栏工作台外壳。 */
+.app-shell {
+  /* 使用网格布局保持三栏稳定。 */
+  display: grid;
+  /* 左侧栏、中间聊天、右侧运行面板。 */
+  grid-template-columns: 268px minmax(420px, 1fr) 336px;
+  /* 高度固定为视口高度。 */
+  height: 100vh;
+  /* 限制最大高度为视口，避免长消息把整页撑出屏幕。 */
+  max-height: 100vh;
+  /* 栏间边框由各面板承担。 */
+  background: var(--bg);
+  /* 外壳自己不滚动，滚动权交给消息区和侧栏。 */
+  overflow: hidden;
+}
+
+/* 左侧会话栏。 */
+.sidebar {
+  /* 垂直排列内容。 */
+  display: flex;
+  /* 主轴方向为纵向。 */
+  flex-direction: column;
+  /* 设置内边距。 */
+  padding: 18px 14px;
+  /* 使用次级面板背景。 */
+  background: var(--panel-soft);
+  /* 添加右边框。 */
+  border-right: 1px solid var(--border);
+  /* 允许侧栏内部滚动。 */
+  overflow-y: auto;
+  /* grid 子项允许收缩，避免侧栏内容撑高整页。 */
+  min-height: 0;
+}
+
+/* 品牌行。 */
+.brand-row {
+  /* 横向排列品牌标识和文字。 */
+  display: flex;
+  /* 垂直居中。 */
+  align-items: center;
+  /* 元素间距。 */
+  gap: 10px;
+  /* 底部间距。 */
+  margin-bottom: 18px;
+}
+
+/* 品牌标识。 */
+.brand-mark {
+  /* 固定宽度。 */
+  width: 36px;
+  /* 固定高度。 */
+  height: 36px;
+  /* 居中内容。 */
+  display: grid;
+  /* 内容居中。 */
+  place-items: center;
+  /* 使用强调色背景。 */
+  background: var(--accent);
+  /* 白色文字。 */
+  color: #ffffff;
+  /* 圆角。 */
+  border-radius: var(--radius);
+  /* 加粗。 */
+  font-weight: 800;
+}
+
+/* 品牌主标题。 */
+.brand-title {
+  /* 字号。 */
+  font-size: 15px;
+  /* 字重。 */
+  font-weight: 700;
+}
+
+/* 品牌副标题。 */
+.brand-subtitle {
+  /* 顶部微距。 */
+  margin-top: 2px;
+  /* 字号。 */
+  font-size: 12px;
+  /* 次级文字色。 */
+  color: var(--muted);
+}
+
+/* 新会话按钮。 */
+.new-chat-button {
+  /* 横向排列图标和文字。 */
+  display: flex;
+  /* 垂直居中。 */
+  align-items: center;
+  /* 内容居中。 */
+  justify-content: center;
+  /* 元素间距。 */
+  gap: 8px;
+  /* 固定高度。 */
+  min-height: 38px;
+  /* 去掉默认边框。 */
+  border: 0;
+  /* 设置圆角。 */
+  border-radius: var(--radius);
+  /* 使用主文字底色反差。 */
+  background: #17202a;
+  /* 白色文字。 */
+  color: #ffffff;
+  /* 鼠标手型。 */
+  cursor: pointer;
+  /* 字重。 */
+  font-weight: 700;
+}
+
+/* 新会话按钮悬停。 */
+.new-chat-button:hover {
+  /* 悬停时略微变亮。 */
+  background: #253341;
+}
+
+/* 侧栏分区。 */
+.side-section {
+  /* 顶部间距。 */
+  margin-top: 20px;
+}
+
+/* 分区标题。 */
+.section-title {
+  /* 字号。 */
+  font-size: 12px;
+  /* 字重。 */
+  font-weight: 800;
+  /* 字母和中文保持正常间距。 */
+  letter-spacing: 0;
+  /* 次级文字色。 */
+  color: #51606d;
+  /* 底部间距。 */
+  margin-bottom: 10px;
+}
+
+/* 状态列表。 */
+.status-list {
+  /* 垂直排列状态项。 */
+  display: grid;
+  /* 项间距。 */
+  gap: 8px;
+}
+
+/* 单个状态行。 */
+.status-row {
+  /* 横向布局。 */
+  display: flex;
+  /* 两端对齐。 */
+  justify-content: space-between;
+  /* 垂直居中。 */
+  align-items: center;
+  /* 内边距。 */
+  padding: 8px 10px;
+  /* 背景。 */
+  background: #f3f6f8;
+  /* 圆角。 */
+  border-radius: var(--radius);
+  /* 字号。 */
+  font-size: 12px;
+  /* 边框。 */
+  border: 1px solid var(--border);
+}
+
+/* 成功状态标记。 */
+.status-ok {
+  /* 使用强调色。 */
+  color: var(--accent);
+  /* 字重。 */
+  font-weight: 800;
+}
+
+/* 异常状态标记。 */
+.status-bad {
+  /* 使用错误色。 */
+  color: var(--danger);
+  /* 字重。 */
+  font-weight: 800;
+}
+
+/* 弱提示文字。 */
+.muted {
+  /* 使用次级文字色。 */
+  color: var(--muted);
+}
+
+/* 示例问题按钮。 */
+.prompt-chip {
+  /* 块级按钮占满宽度。 */
+  display: block;
+  /* 宽度。 */
+  width: 100%;
+  /* 文本左对齐。 */
+  text-align: left;
+  /* 内边距。 */
+  padding: 9px 10px;
+  /* 下方间距。 */
+  margin-bottom: 8px;
+  /* 边框。 */
+  border: 1px solid var(--border);
+  /* 圆角。 */
+  border-radius: var(--radius);
+  /* 背景。 */
+  background: #ffffff;
+  /* 主文字颜色。 */
+  color: var(--text);
+  /* 字号。 */
+  font-size: 13px;
+  /* 鼠标手型。 */
+  cursor: pointer;
+}
+
+/* 示例问题悬停。 */
+.prompt-chip:hover {
+  /* 使用强调浅底。 */
+  background: var(--accent-soft);
+  /* 使用强调色边框。 */
+  border-color: #9bd2ca;
+}
+
+/* 中间聊天区域。 */
+.chat-panel {
+  /* 纵向布局。 */
+  display: flex;
+  /* 主轴为纵向。 */
+  flex-direction: column;
+  /* 最小宽度避免输入区压坏。 */
+  min-width: 0;
+  /* 允许中间列在 grid 内收缩，长消息才会进入内部滚动。 */
+  min-height: 0;
+  /* 背景色。 */
+  background: var(--panel);
+  /* 防止长消息把输入区挤出视口。 */
+  overflow: hidden;
+}
+
+/* 聊天顶部栏。 */
+.chat-header {
+  /* 横向布局。 */
+  display: flex;
+  /* 两端对齐。 */
+  justify-content: space-between;
+  /* 垂直居中。 */
+  align-items: center;
+  /* 内边距。 */
+  padding: 18px 24px;
+  /* 底部边框。 */
+  border-bottom: 1px solid var(--border);
+  /* 背景色。 */
+  background: rgba(248, 250, 251, 0.96);
+  /* 顶部栏固定占位，不参与消息区滚动。 */
+  flex: 0 0 auto;
+}
+
+/* 顶部主标题。 */
+.chat-header h1 {
+  /* 清除默认外边距。 */
+  margin: 0;
+  /* 字号。 */
+  font-size: 18px;
+  /* 字重。 */
+  font-weight: 800;
+}
+
+/* 顶部副标题。 */
+.chat-header p {
+  /* 外边距。 */
+  margin: 4px 0 0;
+  /* 字号。 */
+  font-size: 12px;
+  /* 次级颜色。 */
+  color: var(--muted);
+}
+
+/* 顶部操作区。 */
+.header-actions {
+  /* 横向排列。 */
+  display: flex;
+  /* 垂直居中。 */
+  align-items: center;
+  /* 间距。 */
+  gap: 10px;
+}
+
+/* 线程标识。 */
+.thread-pill {
+  /* 内边距。 */
+  padding: 7px 9px;
+  /* 圆角。 */
+  border-radius: var(--radius);
+  /* 背景。 */
+  background: #edf2f5;
+  /* 字号。 */
+  font-size: 12px;
+  /* 次级文字色。 */
+  color: #51606d;
+  /* 边框。 */
+  border: 1px solid var(--border);
+}
+
+/* 消息列表。 */
+.messages {
+  /* 占据剩余空间。 */
+  flex: 1 1 auto;
+  /* 允许 flex 子项小于内容高度，触发内部滚动条。 */
+  min-height: 0;
+  /* 内边距。 */
+  padding: 24px;
+  /* 强制显示纵向滚动条，长会话时上下文可拖动。 */
+  overflow-y: scroll;
+  /* 禁止横向溢出遮挡。 */
+  overflow-x: hidden;
+  /* 给输入区上方留出呼吸空间，避免最后一条消息贴底。 */
+  padding-bottom: 32px;
+  /* 使用即时滚动，避免逐字输出时滚动条状态延迟。 */
+  scroll-behavior: auto;
+  /* 稳定滚动条占位，避免出现滚动条时内容横向跳动。 */
+  scrollbar-gutter: stable;
+}
+
+/* Chrome/Edge 滚动条宽度。 */
+.messages::-webkit-scrollbar {
+  /* 设置可拖动条宽度。 */
+  width: 12px;
+}
+
+/* Chrome/Edge 滚动条轨道。 */
+.messages::-webkit-scrollbar-track {
+  /* 使用浅色轨道。 */
+  background: #edf2f5;
+}
+
+/* Chrome/Edge 滚动条滑块。 */
+.messages::-webkit-scrollbar-thumb {
+  /* 使用强调色滑块。 */
+  background: #9bb8b5;
+  /* 设置滑块圆角。 */
+  border-radius: 8px;
+  /* 用边框制造内缩效果。 */
+  border: 3px solid #edf2f5;
+}
+
+/* Chrome/Edge 滚动条滑块悬停。 */
+.messages::-webkit-scrollbar-thumb:hover {
+  /* 悬停时加深滑块颜色。 */
+  background: var(--accent);
+}
+
+/* 单条消息。 */
+.message {
+  /* 横向排列头像和内容。 */
+  display: flex;
+  /* 头像和内容间距。 */
+  gap: 12px;
+  /* 底部间距。 */
+  margin-bottom: 18px;
+}
+
+/* 用户消息整体靠右。 */
+.user-message {
+  /* 反向排列，让头像在右侧。 */
+  flex-direction: row-reverse;
+}
+
+/* 消息头像。 */
+.avatar {
+  /* 固定宽度。 */
+  width: 34px;
+  /* 固定高度。 */
+  height: 34px;
+  /* 防止压缩。 */
+  flex: 0 0 34px;
+  /* 居中内容。 */
+  display: grid;
+  /* 内容居中。 */
+  place-items: center;
+  /* 圆角。 */
+  border-radius: var(--radius);
+  /* 字号。 */
+  font-size: 12px;
+  /* 字重。 */
+  font-weight: 800;
+}
+
+/* 助手头像。 */
+.assistant-avatar {
+  /* 强调浅底。 */
+  background: var(--accent-soft);
+  /* 强调色文字。 */
+  color: var(--accent);
+}
+
+/* 用户头像。 */
+.user-avatar {
+  /* 深色背景。 */
+  background: #253341;
+  /* 白色文字。 */
+  color: #ffffff;
+}
+
+/* 消息正文。 */
+.message-body {
+  /* 限制最大宽度，保证长文本可读。 */
+  max-width: min(820px, 86%);
+  /* 背景。 */
+  background: #ffffff;
+  /* 边框。 */
+  border: 1px solid var(--border);
+  /* 圆角。 */
+  border-radius: var(--radius);
+  /* 内边距。 */
+  padding: 12px 14px;
+  /* 阴影。 */
+  box-shadow: var(--shadow);
+  /* 长单词、ID、chunk 名称自动换行，避免横向遮挡。 */
+  overflow-wrap: anywhere;
+}
+
+/* 用户消息正文。 */
+.user-message .message-body {
+  /* 使用深色背景。 */
+  background: #17202a;
+  /* 深色边框。 */
+  border-color: #17202a;
+  /* 白色文字。 */
+  color: #ffffff;
+  /* 去掉阴影保持干净。 */
+  box-shadow: none;
+}
+
+/* 消息来源。 */
+.message-meta {
+  /* 字号。 */
+  font-size: 12px;
+  /* 字重。 */
+  font-weight: 800;
+  /* 次级色。 */
+  color: var(--muted);
+  /* 底部间距。 */
+  margin-bottom: 8px;
+}
+
+/* 用户消息来源。 */
+.user-message .message-meta {
+  /* 用户气泡内使用浅色。 */
+  color: #cdd6df;
+}
+
+/* 普通消息文本。 */
+.message-text {
+  /* 保留换行。 */
+  white-space: pre-wrap;
+  /* 行高。 */
+  line-height: 1.7;
+  /* 字号。 */
+  font-size: 14px;
+  /* 清除 pre 默认外边距。 */
+  margin: 0;
+  /* 使用继承字体。 */
+  font-family: inherit;
+  /* 长 ID 和英文 token 自动换行。 */
+  overflow-wrap: anywhere;
+}
+
+/* 答案文本。 */
+.answer-text {
+  /* 避免空答案占位过高。 */
+  min-height: 0;
+}
+
+/* 公开解析过程盒子。 */
+.reasoning-box {
+  /* 背景。 */
+  background: #f4f7f8;
+  /* 边框。 */
+  border: 1px solid var(--border);
+  /* 圆角。 */
+  border-radius: var(--radius);
+  /* 底部间距。 */
+  margin-bottom: 10px;
+  /* 裁剪内部圆角。 */
+  overflow: hidden;
+}
+
+/* 折叠标题。 */
+.reasoning-box summary {
+  /* 鼠标手型。 */
+  cursor: pointer;
+  /* 内边距。 */
+  padding: 9px 10px;
+  /* 字号。 */
+  font-size: 13px;
+  /* 字重。 */
+  font-weight: 800;
+  /* 背景。 */
+  background: #edf3f4;
+}
+
+/* 解析文本。 */
+.reasoning-text {
+  /* 清除默认外边距。 */
+  margin: 0;
+  /* 内边距。 */
+  padding: 10px;
+  /* 保留换行。 */
+  white-space: pre-wrap;
+  /* 继承字体。 */
+  font-family: inherit;
+  /* 字号。 */
+  font-size: 13px;
+  /* 行高。 */
+  line-height: 1.65;
+  /* 颜色。 */
+  color: #33414e;
+  /* 长 chunk_id 和工具名自动换行。 */
+  overflow-wrap: anywhere;
+}
+
+/* 输入区。 */
+.composer {
+  /* 横向布局。 */
+  display: grid;
+  /* 输入框和发送按钮列。 */
+  grid-template-columns: minmax(0, 1fr) 44px;
+  /* 间距。 */
+  gap: 10px;
+  /* 内边距。 */
+  padding: 16px 24px 20px;
+  /* 顶部边框。 */
+  border-top: 1px solid var(--border);
+  /* 背景。 */
+  background: #ffffff;
+  /* 输入区固定在底部，不被消息内容挤走。 */
+  flex: 0 0 auto;
+  /* 保证输入区层级高于滚动内容。 */
+  z-index: 2;
+}
+
+/* 输入框。 */
+.composer textarea {
+  /* 宽度。 */
+  width: 100%;
+  /* 最小高度。 */
+  min-height: 46px;
+  /* 最大高度。 */
+  max-height: 150px;
+  /* 允许纵向缩放但不允许横向破坏布局。 */
+  resize: vertical;
+  /* 边框。 */
+  border: 1px solid var(--border);
+  /* 圆角。 */
+  border-radius: var(--radius);
+  /* 内边距。 */
+  padding: 12px 13px;
+  /* 字体。 */
+  font: inherit;
+  /* 字号。 */
+  font-size: 14px;
+  /* 轮廓。 */
+  outline: none;
+  /* 背景。 */
+  background: #f9fbfc;
+}
+
+/* 输入框聚焦。 */
+.composer textarea:focus {
+  /* 强调色边框。 */
+  border-color: var(--accent);
+  /* 聚焦阴影。 */
+  box-shadow: 0 0 0 3px rgba(22, 130, 122, 0.12);
+}
+
+/* 发送按钮。 */
+.send-button {
+  /* 固定高度。 */
+  height: 46px;
+  /* 去掉默认边框。 */
+  border: 0;
+  /* 圆角。 */
+  border-radius: var(--radius);
+  /* 背景。 */
+  background: var(--accent);
+  /* 白色文字。 */
+  color: #ffffff;
+  /* 字号。 */
+  font-size: 20px;
+  /* 鼠标手型。 */
+  cursor: pointer;
+}
+
+/* 发送按钮悬停。 */
+.send-button:hover {
+  /* 略微加深。 */
+  background: #126e68;
+}
+
+/* 发送按钮禁用。 */
+.send-button:disabled {
+  /* 降低透明度。 */
+  opacity: 0.55;
+  /* 禁用鼠标。 */
+  cursor: not-allowed;
+}
+
+/* 右侧运行面板。 */
+.inspector {
+  /* 设置内边距。 */
+  padding: 18px 14px;
+  /* 背景。 */
+  background: var(--panel-soft);
+  /* 左边框。 */
+  border-left: 1px solid var(--border);
+  /* 允许滚动。 */
+  overflow-y: auto;
+  /* grid 子项允许收缩，避免右侧长工具说明撑高整页。 */
+  min-height: 0;
+}
+
+/* 右侧分区。 */
+.inspector-section {
+  /* 底部间距。 */
+  margin-bottom: 20px;
+}
+
+/* 运行步骤列表。 */
+.runtime-steps {
+  /* 清除默认外边距。 */
+  margin: 0;
+  /* 左侧内边距。 */
+  padding-left: 22px;
+  /* 字号。 */
+  font-size: 13px;
+  /* 行高。 */
+  line-height: 1.8;
+}
+
+/* 运行步骤项。 */
+.runtime-steps li::marker {
+  /* 使用强调色序号。 */
+  color: var(--accent);
+  /* 字重。 */
+  font-weight: 800;
+}
+
+/* 摘要网格。 */
+.summary-grid {
+  /* 网格排列。 */
+  display: grid;
+  /* 两列。 */
+  grid-template-columns: 1fr 1fr;
+  /* 间距。 */
+  gap: 8px;
+}
+
+/* 摘要项。 */
+.summary-item {
+  /* 内边距。 */
+  padding: 9px;
+  /* 背景。 */
+  background: #f4f7f8;
+  /* 边框。 */
+  border: 1px solid var(--border);
+  /* 圆角。 */
+  border-radius: var(--radius);
+  /* 最小高度。 */
+  min-height: 58px;
+}
+
+/* 摘要标签。 */
+.summary-label {
+  /* 字号。 */
+  font-size: 11px;
+  /* 次级色。 */
+  color: var(--muted);
+}
+
+/* 摘要值。 */
+.summary-value {
+  /* 顶部间距。 */
+  margin-top: 5px;
+  /* 字号。 */
+  font-size: 14px;
+  /* 字重。 */
+  font-weight: 800;
+  /* 自动换行。 */
+  word-break: break-word;
+}
+
+/* 空摘要。 */
+.summary-empty {
+  /* 横跨两列。 */
+  grid-column: 1 / -1;
+  /* 次级色。 */
+  color: var(--muted);
+  /* 字号。 */
+  font-size: 13px;
+}
+
+/* 工具清单。 */
+.tool-list {
+  /* 垂直排列。 */
+  display: grid;
+  /* 间距。 */
+  gap: 8px;
+}
+
+/* 工具项。 */
+.tool-item {
+  /* 内边距。 */
+  padding: 9px;
+  /* 背景。 */
+  background: #f4f7f8;
+  /* 边框。 */
+  border: 1px solid var(--border);
+  /* 圆角。 */
+  border-radius: var(--radius);
+}
+
+/* 工具名。 */
+.tool-name {
+  /* 字号。 */
+  font-size: 12px;
+  /* 字重。 */
+  font-weight: 800;
+  /* 颜色。 */
+  color: var(--accent);
+}
+
+/* 工具角色。 */
+.tool-role {
+  /* 顶部间距。 */
+  margin-top: 5px;
+  /* 字号。 */
+  font-size: 12px;
+  /* 行高。 */
+  line-height: 1.55;
+  /* 次级色。 */
+  color: var(--muted);
+}
+
+/* 移动端布局。 */
+@media (max-width: 1060px) {
+  /* 调整三栏为左侧和聊天两栏。 */
+  .app-shell {
+    /* 右侧面板隐藏，给聊天区域更多空间。 */
+    grid-template-columns: 240px minmax(0, 1fr);
+  }
+
+  /* 隐藏右侧面板。 */
+  .inspector {
+    /* 不显示右侧面板。 */
+    display: none;
+  }
+}
+
+/* 小屏布局。 */
+@media (max-width: 760px) {
+  /* 单列布局。 */
+  .app-shell {
+    /* 只保留聊天列。 */
+    grid-template-columns: 1fr;
+  }
+
+  /* 隐藏左侧栏。 */
+  .sidebar {
+    /* 不显示左侧栏。 */
+    display: none;
+  }
+
+  /* 缩小头部内边距。 */
+  .chat-header {
+    /* 移动端内边距。 */
+    padding: 14px 16px;
+  }
+
+  /* 缩小消息区内边距。 */
+  .messages {
+    /* 移动端内边距。 */
+    padding: 16px;
+  }
+
+  /* 移动端消息正文宽度。 */
+  .message-body {
+    /* 放宽最大宽度。 */
+    max-width: 92%;
+  }
+
+  /* 移动端输入区。 */
+  .composer {
+    /* 移动端内边距。 */
+    padding: 12px 16px 16px;
+  }
+}
